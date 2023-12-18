@@ -4,9 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+//play sound
+#include<mmsystem.h>
 
 float blimpX = 2.19;  // Initial x-coordinate of the ellipse
-float blimpSpeed = 0.01;     // blimpSpeed of movement
+float blimpSpeed = 0.001;     // blimpSpeed of movement
 bool blimpReverse = true;  // Flag to indicate the direction of movement
 
 
@@ -73,19 +75,20 @@ void policeBlimp() {
     //box
     glBegin(GL_QUADS);
     glColor3ub(71, 66, 72);
-    glVertex2f(1.96175, 14.07416);
-    glVertex2f(2.31214, 14.07416);
-    glVertex2f(2.32, 14.21);
-    glVertex2f(1.94, 14.21);
+    glVertex2f((1.96175 - 2.19) + blimpX, 14.07416);
+    glVertex2f((2.31214 - 2.19) + blimpX, 14.07416);
+    glVertex2f((2.32 - 2.19) + blimpX, 14.21);
+    glVertex2f((1.94 - 2.19) + blimpX, 14.21);
     glEnd();
 
     glBegin(GL_QUADS);
     glColor3ub(88, 96, 104);
-    glVertex2f(1.99719, 14.15797);
-    glVertex2f(1.99962, 14.12645);
-    glVertex2f(2.31356, 14.12766);
-    glVertex2f(2.31356, 14.1616);
+    glVertex2f((1.99719 - 2.19) + blimpX, 14.1616);
+    glVertex2f((1.99962 - 2.19) + blimpX, 14.12766);
+    glVertex2f((2.31356 - 2.19) + blimpX, 14.12766);
+    glVertex2f((2.31356 - 2.19) + blimpX, 14.1616);
     glEnd();
+
 
 }
 
@@ -365,6 +368,11 @@ int main(int argc, char** argv) {
     // Initialize updateBlimp function and timer
     glutTimerFunc(0, updateBlimp, 0);
 
+
+    //Code to play music
+    sndPlaySound("bat.wav", SND_ASYNC);
+    // sndPlaySound("instrumental.wav", SND_ASYNC);
+    // PlaySound("instrumental.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
     glutMainLoop(); // Enter the event-processing loop
     return 0;
 }
