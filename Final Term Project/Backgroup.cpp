@@ -22,6 +22,33 @@ void circle(float radius, float xc, float yc, float r, float g, float b)
     glEnd();
 }
 
+void bottomRightbuilding() {
+    //roof
+    glBegin(GL_QUADS);
+    glColor3ub(48, 33, 30);
+    glVertex2f(4.60729, 2.16452);
+    glVertex2f(3.83891, 0.74136);
+    glVertex2f(5.9955, 0.36659);
+    glVertex2f(6, 1.96);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(73, 47, 49);
+    glVertex2f(3.83891, 0.74136);
+    glVertex2f(3.84895, 0.58293);
+    glVertex2f(6, 0.2);
+    glVertex2f(5.9955, 0.36659);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(67, 46, 48);
+    glVertex2f(4.01, 0.56);
+    glVertex2f(4, 0);
+    glVertex2f(6, 0);
+    glVertex2f(6, 0.2);
+    glEnd();
+
+}
+
 void buildingWithVerticleWindows() {
     //Antenna top
     glBegin(GL_QUADS);
@@ -243,6 +270,8 @@ void display() {
     buildingWithVerticleWindows();
     wayneTower();
     batmanBuilding();
+    bottomRightbuilding();
+
 
 
     glFlush(); // Render now
