@@ -334,9 +334,20 @@ void batmanBuilding() {
 
 
 }
+
+void buildingNextTobuildingWithVerticleWindows() {
+    glBegin(GL_QUADS);
+    glColor3ub(21, 20, 23); // Building rgb(21, 20, 23)
+    glVertex2f(3.8, 8.7);
+    glVertex2f(4.28, 8.69);
+    glVertex2f(4.28, 9.73);
+    glVertex2f(3.8, 9.73);
+    glEnd();
+}
+
+
 void display() {
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
-
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
 
     glMatrixMode(GL_PROJECTION);
@@ -350,6 +361,7 @@ void display() {
     wayneTower();
     batmanBuilding();
     bottomRightbuilding();
+    buildingNextTobuildingWithVerticleWindows();
 
     glFlush(); // Render now
 
