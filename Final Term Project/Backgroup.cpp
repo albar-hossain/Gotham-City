@@ -5,6 +5,31 @@
 #include <stdlib.h>
 #include <windows.h>
 
+float blimpX = 2.19;  // Initial x-coordinate of the ellipse
+float blimpSpeed = 0.01;     // blimpSpeed of movement
+bool blimpReverse = true;  // Flag to indicate the direction of movement
+
+
+void updateBlimp(int value) {
+    // Update the x-coordinate of the ellipse based on the direction of movement
+    if (blimpReverse) {
+        blimpX += blimpSpeed;
+    }
+    else {
+        blimpX -= blimpSpeed;
+    }
+
+    // Check if the blimp has reached the right or left edge
+    if (blimpX > 5) {
+        blimpReverse = false;
+    }
+    else if (blimpX < -5) {
+        blimpReverse = true;
+    }
+
+    glutPostRedisplay(); // Request a redraw to create animation effect
+    glutTimerFunc(16.66, updateBlimp, 0); // 60 frames per second (1000 ms / 60 frames = 16.66 ms per frame)
+}
 
 void circle(float radius, float xc, float yc, float r, float g, float b)
 {
@@ -20,6 +45,48 @@ void circle(float radius, float xc, float yc, float r, float g, float b)
         glVertex2f(x + xc, y + yc);
     }
     glEnd();
+}
+
+void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int segments, float red, float green, float blue) {
+
+
+    glBegin(GL_TRIANGLE_FAN);
+
+    glColor3ub(red, green, blue); // Set fill color
+    glVertex2f(centerX, centerY); // Center of the ellipse
+
+
+    for (int i = 0; i <= segments; ++i) {
+        float theta = 2.0f * 3.1415926f * float(i) / float(segments);
+
+        float x = radiusX * cosf(theta);
+        float y = radiusY * sinf(theta);
+
+        glVertex2f(x + centerX, y + centerY);
+    }
+
+    glEnd();
+}
+
+void policeBlimp() {
+    drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
+    //box
+    glBegin(GL_QUADS);
+    glColor3ub(71, 66, 72);
+    glVertex2f(1.96175, 14.07416);
+    glVertex2f(2.31214, 14.07416);
+    glVertex2f(2.32, 14.21);
+    glVertex2f(1.94, 14.21);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(88, 96, 104);
+    glVertex2f(1.99719, 14.15797);
+    glVertex2f(1.99962, 14.12645);
+    glVertex2f(2.31356, 14.12766);
+    glVertex2f(2.31356, 14.1616);
+    glEnd();
+
 }
 
 void bottomRightbuilding() {
@@ -161,9 +228,9 @@ void wayneTower() {
     //top tower
     glBegin(GL_POLYGON);
     glColor3ub(59, 43, 41); // Building rgb(59, 43, 41)
-    glVertex2f(-3.52, 11.68);
+    glVertex2f(-3.53, 10.86);
     //glColor3ub(142, 89, 53); // Building rgb(142, 89, 53)
-    glVertex2f(-3.53418, 12.38282);
+    glVertex2f(-3.53418, 12.38);
     glColor3ub(84, 64, 54); // Building rgb(84, 64, 54)
     glVertex2f(-4.4, 12.6);
     glColor3ub(52, 39, 41); // Building rgb(52, 39, 41)
@@ -265,16 +332,21 @@ void batmanBuilding() {
 
 }
 void display() {
-
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
+
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
 
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-6, 6, 0, 17);
+    glMatrixMode(GL_MODELVIEW);
+
+    //Objects
+    policeBlimp();
     buildingWithVerticleWindows();
     wayneTower();
     batmanBuilding();
     bottomRightbuilding();
-
-
 
     glFlush(); // Render now
 
@@ -288,27 +360,10 @@ int main(int argc, char** argv) {
         (glutGet(GLUT_SCREEN_HEIGHT) - 1061) / 2);
     glutCreateWindow("Batman"); // Create a window with the given title
     // Set the window's initial width & height
-    gluOrtho2D(-6, 6, 0, 17);
+    // gluOrtho2D(-6, 6, 0, 17);
     glutDisplayFunc(display); // Register display callback handler for window re-paint
-
-
-    // /* Maximize window using Windows API after glutCreateWindow() has been called */
-
-    // HWND win_handle = FindWindow(0, "Batman");
-    // if (!win_handle)
-    // {
-    //     printf("!!! Failed FindWindow\n");
-    //     return -1;
-    // }
-
-    // SetWindowLong(win_handle, GWL_STYLE, (GetWindowLong(win_handle, GWL_STYLE) | WS_MAXIMIZE));
-    // ShowWindowAsync(win_handle, SW_SHOWMAXIMIZED);
-
-    // /* Activate GLUT main loop */
-
-    // glutMainLoop();
-
-    //glutFullScreen();
+    // Initialize updateBlimp function and timer
+    glutTimerFunc(0, updateBlimp, 0);
 
     glutMainLoop(); // Enter the event-processing loop
     return 0;
