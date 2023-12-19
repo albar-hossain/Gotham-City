@@ -11,9 +11,14 @@ float blimpX = 2.19;  // Initial x-coordinate of the ellipse
 float blimpSpeed = 0.01;     // blimpSpeed of movement
 bool blimpReverse = true;  // Flag to indicate the direction of movement
 
+float lightX = 0.0;          // Initial x-coordinate of the light on the blimp
+float lightSpeed = 0.02;     // Speed of light movement
+bool lightReverse = true;    // Flag to indicate the direction of light movement
+
+
 
 void updateBlimp(int value) {
-    // Update the x-coordinate of the ellipse based on the direction of movement
+    // Update the x-coordinate of the blimp based on the direction of movement
     if (blimpReverse) {
         blimpX += blimpSpeed;
     }
@@ -27,6 +32,22 @@ void updateBlimp(int value) {
     }
     else if (blimpX <= -4.5) {
         blimpReverse = true;
+    }
+
+    // Update the x-coordinate of the light on the blimp based on the direction of movement
+    if (lightReverse) {
+        lightX += lightSpeed;
+    }
+    else {
+        lightX -= lightSpeed;
+    }
+
+    // Check if the light has reached the right or left edge
+    if (lightX >= 0.5) {
+        lightReverse = false;
+    }
+    else if (lightX <= -0.5) {
+        lightReverse = true;
     }
 
     glutPostRedisplay(); // Request a redraw to create animation effect
@@ -73,24 +94,13 @@ void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int
 void policeBlimp() {
     drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
 
-    // //light
-    // glBegin(GL_QUADS);
-    // glColor3ub(177, 160, 53);
-    // glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
-    // glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
-    // glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
-    // glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
-    // glEnd();
-
-
-        //light with gradient transparency
+    // light
     glBegin(GL_QUADS);
-    glColor4ub(177, 160, 53, 255); // Solid color at the bottom
-    glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
-    glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
-    glColor4ub(177, 160, 53, 1); // Semi-transparent color at the top
-    glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
-    glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+    glColor3ub(177, 160, 53);
+    glVertex2f((2.12859 - 2.19) + blimpX + lightX, 14.08628);
+    glVertex2f((2.31533 - 2.19) + blimpX + lightX, 10.89752);
+    glVertex2f((3.98194 - 2.19) + blimpX + lightX, 11.23578);
+    glVertex2f((2.31181 - 2.19) + blimpX + lightX, 14.08628);
     glEnd();
     //box
     glBegin(GL_QUADS);
