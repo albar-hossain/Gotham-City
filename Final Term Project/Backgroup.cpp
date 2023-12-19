@@ -375,13 +375,13 @@ void display() {
     glMatrixMode(GL_MODELVIEW);
 
     //Objects
-
+    policeBlimp();
     buildingWithVerticleWindows();
     wayneTower();
     batmanBuilding();
     bottomRightbuilding();
     buildingNextTobuildingWithVerticleWindows();
-    policeBlimp();
+
     glFlush(); // Render now
 
 }
