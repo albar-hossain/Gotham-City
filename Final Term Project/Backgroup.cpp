@@ -4,7 +4,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+//play sound
+#include<mmsystem.h>
 
+float blimpX = 2.19;  // Initial x-coordinate of the ellipse
+float blimpSpeed = 0.01;     // blimpSpeed of movement
+bool blimpReverse = true;  // Flag to indicate the direction of movement
+
+
+void updateBlimp(int value) {
+    // Update the x-coordinate of the ellipse based on the direction of movement
+    if (blimpReverse) {
+        blimpX += blimpSpeed;
+    }
+    else {
+        blimpX -= blimpSpeed;
+    }
+
+    // Check if the blimp has reached the right or left edge
+    if (blimpX >= 4.3) {
+        blimpReverse = false;
+    }
+    else if (blimpX <= -4.5) {
+        blimpReverse = true;
+    }
+
+    glutPostRedisplay(); // Request a redraw to create animation effect
+    glutTimerFunc(16.66, updateBlimp, 0); // 60 frames per second (1000 ms / 60 frames = 16.66 ms per frame)
+}
 
 void circle(float radius, float xc, float yc, float r, float g, float b)
 {
@@ -20,6 +47,95 @@ void circle(float radius, float xc, float yc, float r, float g, float b)
         glVertex2f(x + xc, y + yc);
     }
     glEnd();
+}
+
+void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int segments, float red, float green, float blue) {
+
+
+    glBegin(GL_TRIANGLE_FAN);
+
+    glColor3ub(red, green, blue); // Set fill color
+    glVertex2f(centerX, centerY); // Center of the ellipse
+
+
+    for (int i = 0; i <= segments; ++i) {
+        float theta = 2.0f * 3.1415926f * float(i) / float(segments);
+
+        float x = radiusX * cosf(theta);
+        float y = radiusY * sinf(theta);
+
+        glVertex2f(x + centerX, y + centerY);
+    }
+
+    glEnd();
+}
+
+void policeBlimp() {
+    drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
+
+    // //light
+    // glBegin(GL_QUADS);
+    // glColor3ub(177, 160, 53);
+    // glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
+    // glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
+    // glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
+    // glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+    // glEnd();
+
+
+        //light with gradient transparency
+    glBegin(GL_QUADS);
+    glColor4ub(177, 160, 53, 255); // Solid color at the bottom
+    glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
+    glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
+    glColor4ub(177, 160, 53, 1); // Semi-transparent color at the top
+    glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
+    glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+    glEnd();
+    //box
+    glBegin(GL_QUADS);
+    glColor3ub(71, 66, 72);
+    glVertex2f((1.96175 - 2.19) + blimpX, 14.07416);
+    glVertex2f((2.31214 - 2.19) + blimpX, 14.07416);
+    glVertex2f((2.32 - 2.19) + blimpX, 14.21);
+    glVertex2f((1.94 - 2.19) + blimpX, 14.21);
+    glEnd();
+    //glass
+    glBegin(GL_QUADS);
+    glColor3ub(88, 96, 104);
+    glVertex2f((1.99719 - 2.19) + blimpX, 14.1616);
+    glVertex2f((1.99962 - 2.19) + blimpX, 14.12766);
+    glVertex2f((2.31356 - 2.19) + blimpX, 14.12766);
+    glVertex2f((2.31356 - 2.19) + blimpX, 14.1616);
+    glEnd();
+
+}
+
+void bottomRightbuilding() {
+    //roof
+    glBegin(GL_QUADS);
+    glColor3ub(48, 33, 30);
+    glVertex2f(4.60729, 2.16452);
+    glVertex2f(3.83891, 0.74136);
+    glVertex2f(5.9955, 0.36659);
+    glVertex2f(6, 1.96);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(73, 47, 49);
+    glVertex2f(3.83891, 0.74136);
+    glVertex2f(3.84895, 0.58293);
+    glVertex2f(6, 0.2);
+    glVertex2f(5.9955, 0.36659);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(67, 46, 48);
+    glVertex2f(4.01, 0.56);
+    glVertex2f(4, 0);
+    glVertex2f(6, 0);
+    glVertex2f(6, 0.2);
+    glEnd();
+
 }
 
 void buildingWithVerticleWindows() {
@@ -132,14 +248,17 @@ void buildingWithVerticleWindows() {
 void wayneTower() {
 
     //top tower
-    glBegin(GL_QUADS);
-    glColor3ub(115, 74, 52); // Building rgb(115, 74, 52)
-    glVertex2f(-3.52, 11.38);
-    glColor3ub(80, 60, 51); // Building rgb(88, 64, 51)
+    glBegin(GL_POLYGON);
+    glColor3ub(59, 43, 41); // Building rgb(59, 43, 41)
+    glVertex2f(-3.53, 10.86);
+    //glColor3ub(142, 89, 53); // Building rgb(142, 89, 53)
+    glVertex2f(-3.53418, 12.38);
+    glColor3ub(84, 64, 54); // Building rgb(84, 64, 54)
     glVertex2f(-4.4, 12.6);
+    glColor3ub(52, 39, 41); // Building rgb(52, 39, 41)
     glVertex2f(-4.4, 10.92);
     //glVertex2f(-5.1, 10.94);
-    glVertex2f(-3.52, 10.6);
+
     glEnd();
 
     glBegin(GL_POLYGON);
@@ -154,25 +273,24 @@ void wayneTower() {
     //Drawing  main structure
     glBegin(GL_QUADS);
     glColor3ub(31, 28, 33); // Building rgb(31, 28, 33)
-    glVertex2f(-6, 7.45);
-    glVertex2f(-4.1, 7.45);
-    glVertex2f(-4.1, 10.94);
-    glVertex2f(-6, 10.86);
+    glVertex2f(-6.00025, 7.44631);
+    glVertex2f(-4.09051, 7.36871);
+    glVertex2f(-4.09986, 10.93592);
+    glVertex2f(-6, 10.86204);
     glEnd();
 
     glBegin(GL_QUADS);
 
     glColor3ub(56, 40, 41); // Building rgb(56, 40, 41)
-    glVertex2f(-4.1, 7.45);
-    glVertex2f(-4.1, 10.94);
+    glVertex2f(-4.09051, 7.36871);
+    glVertex2f(-4.09986, 10.93592);
     glColor3ub(34, 28, 32); // Building rgb(56, 40, 41)
-    glVertex2f(-3, 10.6);
-    // glVertex2f(-3, 9.8);
-    glVertex2f(-3, 7.45);
+    glVertex2f(-3, 10.8);
 
-    // glVertex2f(-3, 7.37);
-    // glVertex2f(-4.1, 7.37);
-    glVertex2f(-6, 10.86);
+    glVertex2f(-3, 7.37229);
+
+
+    //glVertex2f(-6, 10.86);
     glEnd();
 
 
@@ -235,16 +353,35 @@ void batmanBuilding() {
 
 
 }
-void display() {
 
+void buildingNextTobuildingWithVerticleWindows() {
+    glBegin(GL_QUADS);
+    glColor3ub(21, 20, 23); // Building rgb(21, 20, 23)
+    glVertex2f(3.8, 8.7);
+    glVertex2f(4.28, 8.69);
+    glVertex2f(4.28, 9.73);
+    glVertex2f(3.8, 9.73);
+    glEnd();
+}
+
+
+void display() {
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-6, 6, 0, 17);
+    glMatrixMode(GL_MODELVIEW);
+
+    //Objects
 
     buildingWithVerticleWindows();
     wayneTower();
     batmanBuilding();
-
-
+    bottomRightbuilding();
+    buildingNextTobuildingWithVerticleWindows();
+    policeBlimp();
     glFlush(); // Render now
 
 }
@@ -257,28 +394,16 @@ int main(int argc, char** argv) {
         (glutGet(GLUT_SCREEN_HEIGHT) - 1061) / 2);
     glutCreateWindow("Batman"); // Create a window with the given title
     // Set the window's initial width & height
-    gluOrtho2D(-6, 6, 0, 17);
+    // gluOrtho2D(-6, 6, 0, 17);
     glutDisplayFunc(display); // Register display callback handler for window re-paint
+    // Initialize updateBlimp function and timer
+    glutTimerFunc(0, updateBlimp, 0);
 
 
-    // /* Maximize window using Windows API after glutCreateWindow() has been called */
-
-    // HWND win_handle = FindWindow(0, "Batman");
-    // if (!win_handle)
-    // {
-    //     printf("!!! Failed FindWindow\n");
-    //     return -1;
-    // }
-
-    // SetWindowLong(win_handle, GWL_STYLE, (GetWindowLong(win_handle, GWL_STYLE) | WS_MAXIMIZE));
-    // ShowWindowAsync(win_handle, SW_SHOWMAXIMIZED);
-
-    // /* Activate GLUT main loop */
-
-    // glutMainLoop();
-
-    //glutFullScreen();
-
+    //Code to play music
+    sndPlaySound("bat.wav", SND_ASYNC);
+    // sndPlaySound("instrumental.wav", SND_ASYNC);
+    // PlaySound("instrumental.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
     glutMainLoop(); // Enter the event-processing loop
     return 0;
 }
