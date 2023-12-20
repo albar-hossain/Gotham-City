@@ -110,6 +110,118 @@ void policeBlimp() {
     glEnd();
 
 }
+void Buildinginfrontbatman() {
+    //roof
+    glBegin(GL_QUADS);
+    glColor3ub(55, 37, 39);
+    glVertex2f(-0.6121, 5.45109);
+    glVertex2f(-1.8552, 4.83867);
+    glVertex2f(0.09197, 4.49217);
+    glVertex2f(1.40941, 5.26535);
+    glEnd();
+    //front
+    glBegin(GL_QUADS);
+    glColor3ub(31, 31, 36);
+    glVertex2f(0.09197, 4.49217);
+    glVertex2f(-1.41, 4.76);
+    glVertex2f(-1.40174, 3.24704);
+    glVertex2f(0.09639, 3.02589);
+    glEnd();
+    //side
+    glBegin(GL_QUADS);
+    glColor3ub(32, 29, 35);
+    glVertex2f(0.09197, 4.49217);
+    glVertex2f(0.09639, 3.02589);
+    glVertex2f(1.44491, 4.03971);
+    glVertex2f(1.40941, 5.26535);
+    glEnd();
+    //balcony
+    glBegin(GL_QUADS);
+    glColor3ub(29, 29, 35);
+    glVertex2f(-1.31127, 2.95822);
+    glVertex2f(-1.31127, 2.71767);
+    glVertex2f(0.16809, 2.46);
+    glVertex2f(0.16628, 2.76324);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(42, 31, 30);
+    glVertex2f(-0.88, 3.18);
+    glVertex2f(-1.31127, 2.95822);
+    glVertex2f(0.16628, 2.76324);
+    glVertex2f(0.09639, 3.02589);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(29, 28, 32);
+    glVertex2f(-1.4, 3.24704);
+    glVertex2f(-1.4, 2.95822);
+    glVertex2f(-0.88, 3.18);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(56, 37, 34);
+    glVertex2f(0.16628, 2.76324);
+    glVertex2f(0.16809, 2.50719);
+    glVertex2f(2.15261, 4.01663);
+    glVertex2f(2.15098, 4.2764);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(56, 37, 34);
+    glVertex2f(2.15098, 4.2764);
+    glVertex2f(1.43674, 4.35793);
+    glVertex2f(1.44, 4.25);
+    glVertex2f(2.02, 4.17);
+    glEnd();
+    //
+    glBegin(GL_QUADS);
+    glColor3ub(28, 28, 32);
+    glVertex2f(0.09639, 3.02589);
+    glVertex2f(-1.4, 3.24704);
+    glVertex2f(-1.4, 2.65);
+    glVertex2f(0.16628, 2.76324);
+    glEnd();
+
+    //
+    glBegin(GL_QUADS);
+    glColor3ub(84, 46, 41);
+    glVertex2f(2.02, 4.17);
+    glVertex2f(1.44491, 4.03971);
+    glColor3ub(38, 33, 33);
+    glVertex2f(0.09639, 3.02589);
+    glVertex2f(0.16628, 2.76324);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(109, 59, 45);
+    glVertex2f(2.02, 4.17);
+    glColor3ub(55, 37, 36);
+    glVertex2f(1.44, 4.25);
+    glVertex2f(1.44491, 4.03971);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(36, 34, 32);
+    glVertex2f(0.16809, 2.50719);
+    glVertex2f(-1.4175, 2.73);
+    glColor3ub(72, 47, 45);
+    glVertex2f(-1.6, 0);
+    glVertex2f(0.1887, 0);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(38, 37, 34);
+    glVertex2f(0.68, 2.9);
+    glVertex2f(0.16569, 2.55);
+    glColor3ub(107, 65, 53);
+    glVertex2f(0.18, -0.00055);
+    glVertex2f(0.70938, -0.00055);
+    glEnd();
+
+
+
+}
 
 void bottomRightbuilding() {
     //roof
@@ -246,7 +358,19 @@ void buildingWithVerticleWindows() {
 }
 
 void wayneTower() {
+    //antenna
+    glBegin(GL_POLYGON);
+    glColor3ub(134, 92, 70);
+    glVertex2f(-5.15544, 13.50317);
+    glColor3ub(51, 37, 37);
+    glVertex2f(-5.19025, 13.50279);
+    glColor3ub(84, 64, 54);
+    glColor3ub(33, 31, 38);
+    glVertex2f(-5.23, 12.79);
 
+    glVertex2f(-5.13918, 12.78789);
+    //glVertex2f(-5.1, 10.94);
+    glEnd();
     //top tower
     glBegin(GL_POLYGON);
     glColor3ub(59, 43, 41); // Building rgb(59, 43, 41)
@@ -258,7 +382,6 @@ void wayneTower() {
     glColor3ub(52, 39, 41); // Building rgb(52, 39, 41)
     glVertex2f(-4.4, 10.92);
     //glVertex2f(-5.1, 10.94);
-
     glEnd();
 
     glBegin(GL_POLYGON);
@@ -288,10 +411,19 @@ void wayneTower() {
     glVertex2f(-3, 10.8);
 
     glVertex2f(-3, 7.37229);
-
-
     //glVertex2f(-6, 10.86);
     glEnd();
+
+    //toptower
+    glBegin(GL_TRIANGLES);
+    glColor3ub(80, 51, 39);
+    glVertex2f(-4.82, 12.71);
+    glColor3ub(71, 46, 39);
+    glVertex2f(-4.83099, 12.57187);
+    glColor3ub(98, 64, 48);
+    glVertex2f(-4.4, 12.6);
+    glEnd();
+
 
 
 }
@@ -364,6 +496,158 @@ void buildingNextTobuildingWithVerticleWindows() {
     glEnd();
 }
 
+void policeBuilding() {
+    //billboard
+    glBegin(GL_QUADS);
+    glColor3ub(29, 27, 32);
+    glVertex2f(3.75885, 3.03858);
+    glVertex2f(0.57507, 3.4297);
+    glVertex2f(0.55727, 1.56055);
+    glVertex2f(3.76, 1.06);
+    glEnd();
+
+    //roof
+    glBegin(GL_QUADS);
+    glColor3ub(124, 63, 44);
+    glVertex2f(4.47239, 2.20322);
+    glVertex2f(3.76, 2.32);
+    glColor3ub(48, 33, 34);
+    glVertex2f(3.76, 1.06);
+    glVertex2f(3.826, 1.04718);
+    glEnd();
+    //roofboxroof
+    glBegin(GL_QUADS);
+    glColor3ub(29, 27, 32);
+    glVertex2f(4.24392, 3.01404);
+    glVertex2f(3.88724, 3.06037);
+    glVertex2f(3.76, 2.71);
+    glVertex2f(4.01694, 2.68053);
+    glEnd();
+    //roofbox
+    glBegin(GL_QUADS);
+    glColor3ub(29, 27, 32);
+    glVertex2f(3.76, 2.71);
+    glVertex2f(3.76, 1.88);
+    glVertex2f(4.02621, 1.85602);
+    glVertex2f(4.01694, 2.68053);
+    glEnd();
+    //side
+    glBegin(GL_QUADS);
+    glColor3ub(29, 27, 32);
+    glVertex2f(4.24392, 3.01404);
+    glVertex2f(4.01694, 2.68053);
+    glVertex2f(4.02621, 1.85602);
+    glVertex2f(4.26, 2.24);
+    glEnd();
+
+
+    //ledge
+    glBegin(GL_QUADS);
+    glColor3ub(73, 45, 44);
+    glVertex2f(0.50014, 1.58612);
+    glVertex2f(0.41848, 1.52634);
+    glVertex2f(3.7814, 0.96076);
+    glVertex2f(3.826, 1.05);
+    glEnd();
+
+    //front below
+    glBegin(GL_QUADS);
+    glColor3ub(38, 35, 38);
+    glVertex2f(0.7, 1.29);
+    glVertex2f(0.70938, -0.00055);
+    glVertex2f(3.77315, 0.00238);
+    glVertex2f(3.76303, 0.78);
+    glEnd();
+    //1st window
+    glBegin(GL_QUADS);
+    glColor3ub(235, 201, 136);
+    glVertex2f(1.02909, 0.83457);
+    glVertex2f(0.83844, 0.85121);
+    glVertex2f(0.83833, 0.35357);
+    glVertex2f(1.02542, 0.33415);
+    glEnd();
+    //line
+    glBegin(GL_LINES);
+    glColor3ub(66, 48, 46);
+    glVertex2f(0.84, 0.61);
+    glVertex2f(1.03, 0.58);
+    glEnd();
+    //2nd window
+    glBegin(GL_QUADS);
+    glColor3ub(235, 201, 136);
+    glVertex2f(1.36419, 0.77159);
+    glVertex2f(1.17216, 0.79384);
+    glVertex2f(1.1663, 0.2997);
+    glVertex2f(1.36068, 0.26809);
+    glEnd();
+    //line
+    glBegin(GL_LINES);
+    glColor3ub(66, 48, 46);
+    glVertex2f(1.17, 0.55);
+    glVertex2f(1.36, 0.52);
+    glEnd();
+    //3rd window
+    glBegin(GL_QUADS);
+    glColor3ub(235, 201, 136);
+    glVertex2f(2.03434, 0.64471);
+    glVertex2f(1.86108, 0.67719);
+    glVertex2f(1.85747, 0.17907);
+    glVertex2f(2.03073, 0.15741);
+    glEnd();
+    //line
+    glBegin(GL_LINES);
+    glColor3ub(66, 48, 46);
+    glVertex2f(1.86, 0.43);
+    glVertex2f(2.03, 0.4);
+    glEnd();
+
+    //4th window
+    glBegin(GL_QUADS);
+    glColor3ub(235, 201, 136);
+    glVertex2f(2.74097, 0.52306);
+    glVertex2f(2.55001, 0.55084);
+    glVertex2f(2.54306, 0.05433);
+    glVertex2f(2.74097, 0.02309);
+    glEnd();
+    //line
+    glBegin(GL_LINES);
+    glColor3ub(66, 48, 46);
+    glVertex2f(2.55, 0.3);
+    glVertex2f(2.74, 0.28);
+    glEnd();
+
+    //4th window
+    glBegin(GL_QUADS);
+    glColor3ub(235, 201, 136);
+    glVertex2f(3.09512, 0.46056);
+    glVertex2f(2.9111, 0.49528);
+    glVertex2f(2.9, 0);
+    glVertex2f(3.1, 0);
+    glEnd();
+    //line
+    glBegin(GL_LINES);
+    glColor3ub(66, 48, 46);
+    glVertex2f(2.91, 0.24);
+    glVertex2f(3.09, 0.2071);
+    glEnd();
+
+    //ledge
+    glBegin(GL_QUADS);
+    glColor3ub(43, 37, 41);
+    glVertex2f(0.41848, 1.52634);
+    glVertex2f(0.39982, 1.33326);
+    glVertex2f(3.78498, 0.77462);
+    glVertex2f(3.7814, 0.96076);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(38, 30, 32);
+    glVertex2f(3.7814, 0.98);
+    glVertex2f(3.78498, 0.77462);
+    glVertex2f(4.48108, 2.02938);
+    glVertex2f(4.47239, 2.20322);
+    glEnd();
+}
 
 void display() {
     glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
@@ -378,10 +662,13 @@ void display() {
 
     buildingWithVerticleWindows();
     wayneTower();
+    Buildinginfrontbatman();
     batmanBuilding();
+
     bottomRightbuilding();
     buildingNextTobuildingWithVerticleWindows();
     policeBlimp();
+    policeBuilding();
     glFlush(); // Render now
 
 }
