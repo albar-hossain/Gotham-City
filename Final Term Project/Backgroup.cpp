@@ -7,11 +7,13 @@
 //play sound
 #include<mmsystem.h>
 
+
+
 float blimpX = 2.19;  // Initial x-coordinate of the ellipse
 float blimpSpeed = 0.01;     // blimpSpeed of movement
 bool blimpReverse = true;  // Flag to indicate the direction of movement
 
-
+//testing commit
 void updateBlimp(int value) {
     // Update the x-coordinate of the ellipse based on the direction of movement
     if (blimpReverse) {
@@ -254,7 +256,6 @@ void buildingWithVerticleWindows() {
     //Antenna top
     glBegin(GL_QUADS);
     glColor3ub(142, 99, 63); //
-
     glVertex2f(5.52085, 12.64831);//j1
     glVertex2f(5.51921, 12.1929);//k1
     glVertex2f(5.54875, 12.19425);//h1
@@ -264,18 +265,15 @@ void buildingWithVerticleWindows() {
     //Antenna mid
     glBegin(GL_QUADS);
     glColor3ub(113, 84, 63); // Building rgb(131, 91, 59)
-
     glVertex2f(5.51921, 12.1929);//k1
     glVertex2f(5.48451, 12.15581);//l1
     glVertex2f(5.58, 11.74);//f1
-
     glVertex2f(5.54875, 12.19425);//h1
     glEnd();
 
     //Antennabottom
     glBegin(GL_QUADS);
     glColor3ub(75, 49, 46); // Building rgb(131, 91, 59)
-
     glVertex2f(5.48451, 12.15581);//l1
     glVertex2f(5.487, 11.74127);//m1
     glVertex2f(5.58, 11.74);//f1
@@ -316,36 +314,7 @@ void buildingWithVerticleWindows() {
     glVertex2f(4.94, 11.37);
     glEnd();
 
-    //Amtenna
-    // glBegin(GL_POLYGON);
-    // glColor3ub(131, 91, 59); // Building rgb(131, 91, 59)
-
-    // glVertex2f(5.58, 11.74);
-    // glVertex2f(5.58, 12.16);
-    // glVertex2f(5.55, 12.19);
-    // glVertex2f(5.55, 12.65);
-    // glVertex2f(5.52, 12.65);
-    // glVertex2f(5.52, 12.19);
-    // glVertex2f(5.49, 12.16);
-    // glVertex2f(5.49, 11.74);
-    // glEnd();
-
-
-
-    //drawing lines //22 total lines //0.08 difference
-
-    // glBegin(GL_QUADS);
-    // glColor3ub(188, 158, 115); // Building light lines rgb(188, 158, 115)
-    // glVertex2f(4.4, 11.24);
-    // glVertex2f(4.4, 7.2);
-    // glVertex2f(4.34, 7.2);
-    // glVertex2f(4.34, 11.24);
-    // glEnd();
-
-
-    for (float x = 4.34; x <= 5.92; x += 0.09)
-    {
-
+    for (float x = 4.34; x <= 6; x += 0.09) {
         glBegin(GL_QUADS);
         glColor3ub(188, 158, 115); // Building light lines rgb(188, 158, 115)
         glVertex2f(x, 11.24);
@@ -358,6 +327,8 @@ void buildingWithVerticleWindows() {
 }
 
 void wayneTower() {
+
+
     //antenna
     glBegin(GL_POLYGON);
     glColor3ub(134, 92, 70);
@@ -424,6 +395,38 @@ void wayneTower() {
     glVertex2f(-4.4, 12.6);
     glEnd();
 
+
+    // Tower Logo
+    //W
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-5.78951, 10.88477);
+    glVertex2f(-5.65328, 10.88592);
+    glVertex2f(-5.58345, 11.51898);
+    glVertex2f(-5.7254, 11.51669);
+    glVertex2f(-5.72426, 11.28659);
+    glVertex2f(-5.75975, 11.28545);
+    glVertex2f(-5.81355, 11.08969);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-5.84675, 11.08969);
+    glVertex2f(-5.81355, 11.08969);
+    glVertex2f(-5.75975, 11.28545);
+    glVertex2f(-5.77692, 11.52013);
+    glVertex2f(-5.87079, 11.51784);
+    glVertex2f(-5.89254, 11.28545);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-5.89254, 11.28545);
+    glVertex2f(-5.90657, 11.28495);
+    glVertex2f(-5.92967, 11.50365);
+    glVertex2f(-6, 11.5);
+    glVertex2f(-5.99923, 10.87374);
+    glVertex2f(-5.85706, 10.87447);
+    glVertex2f(-5.84675, 11.08969);
+    glEnd();
 
 
 }
