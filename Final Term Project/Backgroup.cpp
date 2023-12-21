@@ -520,15 +520,15 @@ void policeBuilding() {
     glEnd();
     //roofboxroof
     glBegin(GL_QUADS);
-    glColor3ub(29, 27, 32);
+    glColor3ub(136, 79, 55);
     glVertex2f(4.24392, 3.01404);
-    glVertex2f(3.88724, 3.06037);
+    glVertex2f(3.56628, 3.0946);
     glVertex2f(3.76, 2.71);
     glVertex2f(4.01694, 2.68053);
     glEnd();
     //roofbox
     glBegin(GL_QUADS);
-    glColor3ub(29, 27, 32);
+    glColor3ub(19, 28, 38);
     glVertex2f(3.76, 2.71);
     glVertex2f(3.76, 1.88);
     glVertex2f(4.02621, 1.85602);
@@ -536,7 +536,7 @@ void policeBuilding() {
     glEnd();
     //side
     glBegin(GL_QUADS);
-    glColor3ub(29, 27, 32);
+    glColor3ub(58, 41, 43);
     glVertex2f(4.24392, 3.01404);
     glVertex2f(4.01694, 2.68053);
     glVertex2f(4.02621, 1.85602);
