@@ -521,6 +521,40 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.53698, 4.62658);
     glEnd();
 
+    //9th window
+    glBegin(GL_QUADS);
+    glColor3ub(129, 55, 35);
+    glVertex2f(5.16774, 4.97713);
+    glVertex2f(5.018, 4.97866);
+    glVertex2f(5.01559, 4.66269);
+    glVertex2f(5.17385, 4.66236);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(27, 24, 28);
+    glVertex2f(5.02, 4.9);
+    glVertex2f(5.17, 4.9);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(27, 24, 28);
+    glVertex2f(5.02, 4.8);
+    glVertex2f(5.17, 4.8);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(27, 24, 28);
+    glVertex2f(5.02, 4.74);
+    glVertex2f(5.17966, 4.73473);
+    glEnd();
+    //verticle
+    glBegin(GL_LINES);
+    glColor3ub(27, 24, 28);
+    glVertex2f(5.06, 4.98);
+    glVertex2f(5.06, 4.66);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(27, 24, 28);
+    glVertex2f(5.12, 4.98);
+    glVertex2f(5.11936, 4.65646);
+    glEnd();
 
 
 }
