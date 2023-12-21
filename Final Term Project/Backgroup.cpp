@@ -224,7 +224,24 @@ void Buildinginfrontbatman() {
 
 
 }
-
+void buildingBeforeverticleWindows() {
+    //roof
+    glBegin(GL_QUADS);
+    glColor3ub(56, 37, 31);
+    glVertex2f(6.00066, 6.82114);
+    glVertex2f(5.32053, 6.85204);
+    glVertex2f(4.91182, 6.50363);
+    glVertex2f(5.99537, 6.45543);
+    glEnd();
+    //front
+    glBegin(GL_QUADS);
+    glColor3ub(56, 37, 31);
+    glVertex2f(5.99537, 6.45543);
+    glVertex2f(4.91182, 6.50363);
+    glVertex2f(4.97154, 4.33331);
+    glVertex2f(6.00122, 4.22725);
+    glEnd();
+}
 void buildingAboveBottomRight() {
     //roof
     glBegin(GL_QUADS);
@@ -244,6 +261,56 @@ void buildingAboveBottomRight() {
     glVertex2f(6, 1.96);
     glEnd();
 
+    //1st_window
+    glBegin(GL_QUADS);
+    glColor3ub(221, 158, 61);
+    glVertex2f(4.9122, 3.33915);
+    glVertex2f(4.80321, 3.34045);
+    glVertex2f(4.8, 2.6);
+    glVertex2f(4.91004, 2.59156);
+    glEnd();
+    //2nd window
+    glBegin(GL_QUADS);
+    glColor3ub(221, 158, 61);
+    glVertex2f(5.11792, 3.30495);
+    glVertex2f(5.00295, 3.31322);
+    glVertex2f(5.00035, 2.57379);
+    glVertex2f(5.11233, 2.56);
+    glEnd();
+    //3rd window
+    glBegin(GL_QUADS);
+    glColor3ub(221, 158, 61);
+    glVertex2f(5.7069, 3.23365);
+    glVertex2f(5.60107, 3.25232);
+    glVertex2f(5.59796, 2.5022);
+    glVertex2f(5.71312, 2.49286);
+    glEnd();
+    //4rth window
+    glBegin(GL_QUADS);
+    glColor3ub(221, 158, 61);
+    glVertex2f(5.91233, 3.20875);
+    glVertex2f(5.8065, 3.23054);
+    glVertex2f(5.8065, 2.4773);
+    glVertex2f(5.91855, 2.46485);
+    glEnd();
+
+    //next row 
+    //5th window
+    glBegin(GL_QUADS);
+    glColor3ub(221, 158, 61);
+    glVertex2f(5.51, 2.44827);
+    glVertex2f(5.39891, 2.46153);
+    glVertex2f(5.39, 2.05);
+    glVertex2f(5.51, 2.04);
+    glEnd();
+    //6th window
+    glBegin(GL_QUADS);
+    glColor3ub(221, 158, 61);
+    glVertex2f(5.71417, 2.42627);
+    glVertex2f(5.59802, 2.43456);
+    glVertex2f(5.6, 2.02);
+    glVertex2f(5.72, 2.00338);
+    glEnd();
 
 
 }
@@ -861,6 +928,7 @@ void display() {
     Buildinginfrontbatman();
     batmanBuilding();
     policeBuilding();
+    buildingBeforeverticleWindows();
     buildingAboveBottomRight();
     bottomRightbuilding();
     buildingNextTobuildingWithVerticleWindows();
