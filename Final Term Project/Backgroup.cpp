@@ -466,8 +466,88 @@ void wayneTower() {
     glVertex2f(-5.00177, 11.17419);
     glVertex2f(-4.89557, 11.54439);
     glVertex2f(-5.05191, 11.54291);
-
     glEnd();
+
+    //N
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-4.73653, 11.07);
+    glVertex2f(-4.68409, 11.35);
+    glVertex2f(-4.72779, 11.55061);
+    glVertex2f(-4.87782, 11.55353);
+    glVertex2f(-4.87782, 10.91115);
+    glVertex2f(-4.74673, 10.91407);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-4.68409, 11.35);
+    glVertex2f(-4.73653, 11.07);
+    glVertex2f(-4.69574, 10.91844);
+    glVertex2f(-4.52823, 10.92135);
+    glVertex2f(-4.5326, 11.55207);
+    glVertex2f(-4.66807, 11.54916);
+    glEnd();
+
+    //E
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-4.49659, 10.93531);
+    glVertex2f(-4.19376, 10.93531);
+    glVertex2f(-4.19479, 11.08621);
+    glVertex2f(-4.49761, 11.08621);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-4.49537, 11.391);
+    glVertex2f(-4.19115, 11.39193);
+    glVertex2f(-4.19301, 11.56925);
+    glVertex2f(-4.49648, 11.56803);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-4.34979, 11.32437);
+    glVertex2f(-4.35, 11.39);
+    glVertex2f(-4.49537, 11.391);
+    glVertex2f(-4.49761, 11.08518);
+    glVertex2f(-4.36, 11.09);
+    glVertex2f(-4.35595, 11.15601);
+    glVertex2f(-4.26972, 11.32539);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-4.5, 11.32);
+    glVertex2f(-4.5, 11.15);
+    glVertex2f(-4.2687, 11.15601);
+    glVertex2f(-4.26972, 11.32539);
+    glEnd();
+
+    //E shadow
+    glBegin(GL_POLYGON);
+    glColor3ub(12, 24, 38);
+    glVertex2f(-4.19115, 11.39193);
+    glVertex2f(-4.13284, 11.38239);
+    glVertex2f(-4.13207, 11.53779);
+    glVertex2f(-4.19301, 11.56925);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(12, 24, 38);
+    glVertex2f(-4.19376, 10.93531);
+    glVertex2f(-4.13592, 10.93388);
+    glVertex2f(-4.13515, 11.06543);
+    glVertex2f(-4.19479, 11.08621);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(12, 24, 38);
+    glVertex2f(-4.2687, 11.15601);
+    glVertex2f(-4.21285, 11.1516);
+    glVertex2f(-4.21131, 11.30853);
+    glVertex2f(-4.26972, 11.32539);
+    glEnd();
+
+    //Windows
 
 }
 
