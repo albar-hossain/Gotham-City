@@ -225,6 +225,28 @@ void Buildinginfrontbatman() {
 
 }
 
+void buildingAboveBottomRight() {
+    //roof
+    glBegin(GL_QUADS);
+    glColor3ub(56, 37, 31);
+    glVertex2f(6.00122, 4.22725);
+    glVertex2f(4.97154, 4.33331);
+    glVertex2f(4.46333, 3.63507);
+    glVertex2f(6.00122, 3.44946);
+    glEnd();
+
+    //front
+    glBegin(GL_QUADS);
+    glColor3ub(22, 20, 23);
+    glVertex2f(6.00122, 3.44946);
+    glVertex2f(4.46333, 3.63507);
+    glVertex2f(4.47349, 2.02625);
+    glVertex2f(6, 1.96);
+    glEnd();
+
+
+
+}
 void bottomRightbuilding() {
     //roof
     glBegin(GL_QUADS);
@@ -839,6 +861,7 @@ void display() {
     Buildinginfrontbatman();
     batmanBuilding();
     policeBuilding();
+    buildingAboveBottomRight();
     bottomRightbuilding();
     buildingNextTobuildingWithVerticleWindows();
     policeBlimp();
