@@ -398,32 +398,29 @@ void wayneTower() {
     //W
     glBegin(GL_POLYGON);
     glColor3ub(152, 94, 64);
-    glVertex2f(-5.78951, 10.88477);
-    glVertex2f(-5.65328, 10.88592);
-    glVertex2f(-5.58345, 11.51898);
-    glVertex2f(-5.7254, 11.51669);
-    glVertex2f(-5.72426, 11.28659);
-    glVertex2f(-5.75975, 11.28545);
-    glVertex2f(-5.81355, 11.08969);
+    glVertex2f(-5.82666, 11.08687);
+    glVertex2f(-5.75902, 11.28983);
+    glVertex2f(-5.77953, 11.51969);
+    glVertex2f(-5.8714, 11.51796);
+    glVertex2f(-5.89019, 11.28498);
     glEnd();
     glBegin(GL_POLYGON);
     glColor3ub(152, 94, 64);
-    glVertex2f(-5.84675, 11.08969);
-    glVertex2f(-5.81355, 11.08969);
-    glVertex2f(-5.75975, 11.28545);
-    glVertex2f(-5.77692, 11.52013);
-    glVertex2f(-5.87079, 11.51784);
-    glVertex2f(-5.89254, 11.28545);
+    glVertex2f(-5.82666, 11.08687);
+    glVertex2f(-5.78938, 10.88175);
+    glVertex2f(-5.65093, 10.88175);
+    glVertex2f(-5.58534, 11.52303);
+    glVertex2f(-5.72623, 11.51938);
+    glVertex2f(-5.75902, 11.28983);
     glEnd();
     glBegin(GL_POLYGON);
     glColor3ub(152, 94, 64);
-    glVertex2f(-5.89254, 11.28545);
-    glVertex2f(-5.90657, 11.28495);
-    glVertex2f(-5.92967, 11.50365);
+    glVertex2f(-5.82666, 11.08687);
+    glVertex2f(-5.85983, 10.87446);
+    glVertex2f(-5.99829, 10.87446);
     glVertex2f(-6, 11.5);
-    glVertex2f(-5.99923, 10.87374);
-    glVertex2f(-5.85706, 10.87447);
-    glVertex2f(-5.84675, 11.08969);
+    glVertex2f(-5.92784, 11.49995);
+    glVertex2f(-5.89019, 11.28498);
     glEnd();
 
 
