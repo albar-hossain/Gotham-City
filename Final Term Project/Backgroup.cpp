@@ -10,7 +10,7 @@
 
 
 float blimpX = 2.19;  // Initial x-coordinate of the ellipse
-float blimpSpeed = 0.01;     // blimpSpeed of movement
+float blimpSpeed = 0.001;     // blimpSpeed of movement
 bool blimpReverse = true;  // Flag to indicate the direction of movement
 
 //testing commit
@@ -249,27 +249,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.41845, 5.76085);
     glVertex2f(5.58879, 5.75448);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.42, 6);
     glVertex2f(5.59, 6);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.42, 5.91);
     glVertex2f(5.59, 5.91);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.42, 5.83);
     glVertex2f(5.59, 5.83);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.48, 6.07);
     glVertex2f(5.48, 5.7);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.55, 6.07);
@@ -284,27 +289,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.83448, 5.72331);
     glVertex2f(6, 5.72);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.84, 5.97);
     glVertex2f(6, 5.97);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.83, 5.89);
     glVertex2f(6, 5.89);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.83, 5.83);
     glVertex2f(6, 5.83);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.9, 6.05);
     glVertex2f(5.89, 5.72);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.96, 6.07);
@@ -319,27 +329,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.00482, 5.41278);
     glVertex2f(5.17253, 5.41278);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.16773, 5.64039);
     glVertex2f(5, 5.64);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.00122, 5.56252);
     glVertex2f(5.17, 5.56);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5, 5.48);
     glVertex2f(5.17, 5.48);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.12, 5.72);
     glVertex2f(5.12, 5.4);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.06, 5.72);
@@ -354,27 +369,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.42381, 5.39291);
     glVertex2f(5.58369, 5.386);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.58, 5.61);
     glVertex2f(5.4, 5.62);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.58476, 5.53134);
     glVertex2f(5.4, 5.54);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.42096, 5.46);
     glVertex2f(5.58369, 5.45);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.48, 5.69);
     glVertex2f(5.48, 5.39);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.55, 5.69);
@@ -389,27 +409,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.63457, 5.3767);
     glVertex2f(5.80175, 5.36434);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.8, 5.6);
     glVertex2f(5.62, 5.61);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.80069, 5.51645);
     glVertex2f(5.63, 5.52);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.8, 5.44);
     glVertex2f(5.64, 5.44);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.69, 5.68);
     glVertex2f(5.68, 5.37);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.75, 5.68);
@@ -424,27 +449,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.2099, 5.02481);
     glVertex2f(5.37763, 5.01825);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.38, 5.25);
     glVertex2f(5.21, 5.26);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.2099, 5.17212);
     glVertex2f(5.38, 5.17);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.21, 5.09);
     glVertex2f(5.38, 5.09);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.27, 5.33);
     glVertex2f(5.26824, 5.02);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.32804, 5.32817);
@@ -459,27 +489,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.62345, 4.98347);
     glVertex2f(5.81073, 4.98476);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.63, 5.22);
     glVertex2f(5.81, 5.22);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.63, 5.14);
     glVertex2f(5.81, 5.14);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.62, 5.06);
     glVertex2f(5.81, 5.06);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.68, 5.3);
     glVertex2f(5.68, 4.98);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.75, 5.32817);
@@ -494,27 +529,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.41405, 4.63767);
     glVertex2f(5.58043, 4.63002);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.41, 4.87);
     glVertex2f(5.59, 4.86);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.41, 4.78);
     glVertex2f(5.59, 4.78);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.41, 4.71);
     glVertex2f(5.58, 4.71);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.48, 4.94);
     glVertex2f(5.48, 4.63);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.54, 4.93);
@@ -529,27 +569,32 @@ void buildingBeforeverticleWindows() {
     glVertex2f(5.01559, 4.66269);
     glVertex2f(5.17385, 4.66236);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.02, 4.9);
     glVertex2f(5.17, 4.9);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.02, 4.8);
     glVertex2f(5.17, 4.8);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.02, 4.74);
     glVertex2f(5.17966, 4.73473);
     glEnd();
     //verticle
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.06, 4.98);
     glVertex2f(5.06, 4.66);
     glEnd();
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(27, 24, 28);
     glVertex2f(5.12, 4.98);
@@ -1024,11 +1069,122 @@ void buildingNextTobuildingWithVerticleWindows() {
     glVertex2f(4.28, 9.73);
     glVertex2f(3.8, 9.73);
     glEnd();
+
+
+    //Windows
+
+    //First floor
+    for (float i = 3.83051; i <= 4.2; i += 0.0818000000)
+    {
+        glLineWidth(2.5);
+        glBegin(GL_LINES);
+        glColor3ub(206, 158, 114); // Building rgb(206, 158, 114)
+        glVertex2f(i, 9.69971);
+        glVertex2f(i, 9.63574);
+        glEnd();
+    }
+    //Second floor
+    for (float i = 3.854; i <= 4.25015; i += 0.0653600000)
+    {
+        glLineWidth(2);
+        glBegin(GL_LINES);
+        glColor3ub(206, 158, 114); // Building rgb(206, 158, 114)
+        glVertex2f(i, 9.53336);
+        glVertex2f(i, 9.60219);
+        glEnd();
+    }
+
+    //Third floor
+    for (float i = 3.82818; i <= 4.25015; i += 0.08311)
+    {
+        glLineWidth(2.2);
+        glBegin(GL_LINES);
+        glColor3ub(206, 158, 114); // Building rgb(206, 158, 114)
+        glVertex2f(i, 9.42444);
+        glVertex2f(i, 9.49947);
+        glEnd();
+    }
+
+    //Forth floor
+    for (float i = 3.89999; i <= 4.25015; i += 0.08311)
+    {
+        glLineWidth(2);
+        glBegin(GL_LINES);
+        glColor3ub(207, 146, 94); // Building rgb(207, 146, 94)
+        glVertex2f(i, 9.32762);
+        glVertex2f(i, 9.4);
+        glEnd();
+    }
+
+    //Fifth floor
+    for (float i = 3.85562; i <= 4.25015; i += 0.08311)
+    {
+        glLineWidth(2);
+        glBegin(GL_LINES);
+        glColor3ub(175, 126, 91); // Building rgb(175, 126, 91)
+        glVertex2f(i, 9.22354);
+        glVertex2f(i, 9.28486);
+        glEnd();
+    }
+    //Sixth floor
+    for (float i = 3.84072; i <= 4.3; i += 0.0818000000)
+    {
+        glLineWidth(2.5);
+        glBegin(GL_LINES);
+        glColor3ub(191, 147, 102); // Building rgb(191, 147, 102)
+        glVertex2f(i, 9.12077);
+        glVertex2f(i, 9.1843);
+        glEnd();
+    }
+
+    //Seventh floor
+    for (float i = 3.85164; i <= 4.25015; i += 0.084)
+    {
+        glLineWidth(2.2);
+        glBegin(GL_LINES);
+        glColor3ub(175, 161, 97); // Building rgb(175, 161, 97)
+        glVertex2f(i, 9.02349);
+        glVertex2f(i, 9.08503);
+        glEnd();
+    }
+
+    //8th floor
+    for (float i = 3.86231; i <= 4.25015; i += 0.08311)
+    {
+        glLineWidth(2);
+        glBegin(GL_LINES);
+        glColor3ub(174, 160, 82); // Building rgb(174, 160, 82)
+        glVertex2f(i, 8.91063);
+        glVertex2f(i, 8.97637);
+        glEnd();
+    }
+
+
+    //9th floor
+    for (float i = 3.84753; i <= 4.25015; i += 0.08311)
+    {
+        glLineWidth(2);
+        glBegin(GL_LINES);
+        glColor3ub(135, 120, 49); // Building rgb(135, 120, 49)
+        glVertex2f(i, 8.81608);
+        glVertex2f(i, 8.87739);
+        glEnd();
+    }
+
+    //10th floor
+    for (float i = 3.85049; i <= 4.25015; i += 0.084)
+    {
+        glLineWidth(2.2);
+        glBegin(GL_LINES);
+        glColor3ub(104, 94, 64); // Building rgb(104, 94, 64)
+        glVertex2f(i, 8.7);
+        glVertex2f(i, 8.7725);
+        glEnd();
+    }
+
 }
 
 void policeBuilding() {
-
-
     //roof
     glBegin(GL_QUADS);
     glColor3ub(124, 63, 44);
@@ -1136,6 +1292,7 @@ void policeBuilding() {
     glVertex2f(1.02542, 0.33415);
     glEnd();
     //line
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(66, 48, 46);
     glVertex2f(0.84, 0.61);
@@ -1150,6 +1307,7 @@ void policeBuilding() {
     glVertex2f(1.36068, 0.26809);
     glEnd();
     //line
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(66, 48, 46);
     glVertex2f(1.17, 0.55);
@@ -1164,6 +1322,7 @@ void policeBuilding() {
     glVertex2f(2.03073, 0.15741);
     glEnd();
     //line
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(66, 48, 46);
     glVertex2f(1.86, 0.43);
@@ -1179,6 +1338,7 @@ void policeBuilding() {
     glVertex2f(2.74097, 0.02309);
     glEnd();
     //line
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(66, 48, 46);
     glVertex2f(2.55, 0.3);
@@ -1194,6 +1354,7 @@ void policeBuilding() {
     glVertex2f(3.1, 0);
     glEnd();
     //line
+    glLineWidth(1);
     glBegin(GL_LINES);
     glColor3ub(66, 48, 46);
     glVertex2f(2.91, 0.24);
@@ -1239,6 +1400,7 @@ void display() {
 
     //Objects
 
+    buildingNextTobuildingWithVerticleWindows();
     buildingWithVerticleWindows();
     wayneTower();
     Buildinginfrontbatman();
@@ -1247,7 +1409,7 @@ void display() {
     buildingBeforeverticleWindows();
     buildingAboveBottomRight();
     bottomRightbuilding();
-    buildingNextTobuildingWithVerticleWindows();
+
     policeBlimp();
     glFlush(); // Render now
 
@@ -1268,7 +1430,7 @@ int main(int argc, char** argv) {
 
 
     //Code to play music
-    sndPlaySound("bat.wav", SND_ASYNC);
+    // sndPlaySound("bat.wav", SND_ASYNC);
     // sndPlaySound("instrumental.wav", SND_ASYNC);
     // PlaySound("instrumental.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
     glutMainLoop(); // Enter the event-processing loop
