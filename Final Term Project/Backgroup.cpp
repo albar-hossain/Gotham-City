@@ -422,7 +422,31 @@ void wayneTower() {
     glVertex2f(-5.92784, 11.49995);
     glVertex2f(-5.89019, 11.28498);
     glEnd();
-
+    //A
+    glBegin(GL_POLYGON);
+    glColor3ub(152, 94, 64);
+    glVertex2f(-5.60356, 10.88539);
+    glVertex2f(-5.4651, 10.8866);
+    glVertex2f(-5.45538, 11.02506);
+    glVertex2f(-5.38251, 11.02628);
+    glVertex2f(-5.36915, 10.8866);
+    glVertex2f(-5.22583, 10.89632);
+    glVertex2f(-5.33636, 11.52546);
+    glVertex2f(-5.50154, 11.52546);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(35, 30, 36);
+    glVertex2f(-5.4651, 10.8866);
+    glVertex2f(-5.36915, 10.89511);
+    glVertex2f(-5.38251, 11.02628);
+    glVertex2f(-5.45538, 11.02628);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(35, 30, 36);
+    glVertex2f(-5.43876, 11.10583);
+    glVertex2f(-5.39495, 11.10583);
+    glVertex2f(-5.41753, 11.21332);
+    glEnd();
 
 }
 
