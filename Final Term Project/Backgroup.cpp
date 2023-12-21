@@ -202,7 +202,7 @@ void Buildinginfrontbatman() {
     glVertex2f(1.44, 4.25);
     glVertex2f(1.44491, 4.03971);
     glEnd();
-
+    //botom front
     glBegin(GL_QUADS);
     glColor3ub(36, 34, 32);
     glVertex2f(0.16809, 2.50719);
@@ -214,11 +214,11 @@ void Buildinginfrontbatman() {
 
     glBegin(GL_QUADS);
     glColor3ub(38, 37, 34);
-    glVertex2f(0.68, 2.9);
+    glVertex2f(2.02, 3.92);
     glVertex2f(0.16569, 2.55);
     glColor3ub(107, 65, 53);
     glVertex2f(0.18, -0.00055);
-    glVertex2f(0.70938, -0.00055);
+    glVertex2f(2, -0.00055);
     glEnd();
 
 
