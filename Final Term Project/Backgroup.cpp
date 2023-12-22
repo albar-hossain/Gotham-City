@@ -3759,6 +3759,76 @@ void GCPD() {
     glVertex2f(4.43, 8.21);
     glEnd();
 
+    //windowfronts
+    //w1 
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(2.53088, 7.68107);
+    glVertex2f(2.33723, 7.68617);
+    glVertex2f(2.32859, 6.98949);
+    glVertex2f(2.5229, 6.98576);
+    glEnd();
+
+    //w2
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(3.03, 7.68);
+    glVertex2f(2.82, 7.68);
+    glVertex2f(2.83, 6.97);
+    glVertex2f(3.05, 6.96);
+    glEnd();
+
+    //w3
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(3.5, 7.69);
+    glVertex2f(3.32, 7.7);
+    glVertex2f(3.31, 6.94);
+    glVertex2f(3.51, 6.94);
+    glEnd();
+
+    //w4
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(3.49644, 6.82179);
+    glVertex2f(3.3, 6.83);
+    glVertex2f(3.28, 6.24);
+    glVertex2f(3.5, 6.22);
+    glEnd();
+
+    //w5
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(2.49, 6.8);
+    glVertex2f(2.3, 6.8);
+    glVertex2f(2.31, 6.28);
+    glVertex2f(2.5, 6.27);
+    glEnd();
+
+    //w6
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(4.03, 7.78);
+    glVertex2f(3.92, 7.75);
+    glVertex2f(3.94, 7.07);
+    glVertex2f(4.06, 7.09);
+    glEnd();
+    //w6
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(4.46, 7.92);
+    glVertex2f(4.37, 7.9);
+    glVertex2f(4.4, 7.2);
+    glVertex2f(4.49, 7.24);
+    glEnd();
+    //w7
+    glBegin(GL_POLYGON);
+    glColor3ub(237, 214, 155);
+    glVertex2f(4.52, 7.07);
+    glVertex2f(4.43, 7.02);
+    glVertex2f(4.42, 6.33);
+    glVertex2f(4.53, 6.38);
+    glEnd();
 
     //roofFront
     glBegin(GL_POLYGON);
