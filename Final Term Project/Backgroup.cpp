@@ -1479,6 +1479,72 @@ void batmanBuilding() {
     glVertex2f(-1.32857, 1.61253);
     glEnd();
 
+    //window 1
+    glBegin(GL_QUADS);
+    glColor3ub(115, 61, 42);
+    glVertex2f(-3.63037, 3.52919);
+    glVertex2f(-4.26819, 3.24707);
+    glColor3ub(0, 33, 30);//not wrorking
+    glVertex2f(-4.25812, 0.04495);
+    glVertex2f(-3.66402, 0.49808);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-3.91, 3.41);
+    glVertex2f(-3.92, 0.31);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-3.64, 2.82);
+    glVertex2f(-4.27, 2.48);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-3.65, 1.99);
+    glVertex2f(-4.26, 1.61);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-3.66, 1.23);
+    glVertex2f(-4.26, 0.84);
+    glEnd();
+
+    //window 2
+    glBegin(GL_QUADS);
+    glColor3ub(191, 126, 69);
+    glVertex2f(-1.68159, 4.49618);
+    glVertex2f(-2.20918, 4.26266);
+    glVertex2f(-2.20053, 1.62472);
+    glVertex2f(-1.69889, 1.98798);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-1.93, 4.39);
+    glVertex2f(-1.91, 1.83);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-1.65, 3.89);
+    glVertex2f(-2.21, 3.61);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-1.69, 3.22);
+    glVertex2f(-2.2, 2.88);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(10, 7, 7);
+    glVertex2f(-1.69, 2.61);
+    glVertex2f(-2.2, 2.28);
+    glEnd();
 
 }
 
