@@ -2521,6 +2521,277 @@ void buildingfrontofgcpd() {
 
 
 }
+
+void BatmanSignal() {
+    glBegin(GL_POLYGON);
+    glColor3ub(183, 160, 56);
+    glVertex2f(3.58, 8.98);
+    glVertex2f(3.31, 8.9);
+    glColor3ub(64, 58, 37);
+    glVertex2f(1.99, 10.92);
+    glVertex2f(3.08674, 11.20102);
+    glEnd();
+    //signal
+    circle(0.71, 2.43162, 11.47399, 75, 68, 39);
+    //batlogo
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.08556, 11.66069);
+    glVertex2f(1.73899, 11.47355);
+    glVertex2f(1.97235, 11.45275);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.08556, 11.66069);
+    glVertex2f(1.97235, 11.45275);
+    glVertex2f(2.02318, 11.37189);
+    glVertex2f(2.10173, 11.58445);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.10173, 11.58445);
+    glVertex2f(2.02318, 11.37189);
+    glVertex2f(2.22067, 11.37586);
+    glVertex2f(2.22188, 11.48972);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.22067, 11.37586);
+    glVertex2f(2.22188, 11.48972);
+    glVertex2f(2.35207, 11.43334);
+    glVertex2f(2.3808, 11.28138);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.35207, 11.43334);
+    glVertex2f(2.3808, 11.28138);
+    glVertex2f(2.48171, 11.29389);
+    glVertex2f(2.47967, 11.44378);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.39177, 11.47299);
+    glVertex2f(2.35207, 11.43334);
+    glVertex2f(2.47967, 11.44378);
+    glVertex2f(2.43162, 11.47399);
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.37926, 11.52821);
+    glVertex2f(2.35207, 11.43334);
+    glVertex2f(2.39177, 11.47299);
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.43162, 11.47399);
+    glVertex2f(2.43657, 11.53238);
+    glVertex2f(2.47967, 11.44378);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.47967, 11.44378);
+    glVertex2f(2.48171, 11.29389);
+    glVertex2f(2.62235, 11.41161);
+    glVertex2f(2.59973, 11.52276);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.59973, 11.52276);
+    glVertex2f(2.62235, 11.41161);
+    glVertex2f(2.82007, 11.44604);
+    glVertex2f(2.70006, 11.62998);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.70938, 11.71845);
+    glVertex2f(2.70006, 11.62998);
+    glVertex2f(2.82007, 11.44604);
+    glVertex2f(2.86187, 11.52438);
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(2.70938, 11.71845);
+    glVertex2f(2.86187, 11.52438);
+    glVertex2f(3.09291, 11.57752);
+    glEnd();
+
+
+
+
+}
+void GCPD() {
+    //roof
+    glBegin(GL_POLYGON);
+    glColor3ub(112, 62, 51);
+    glVertex2f(4.48297, 8.68795);
+    glVertex2f(3.4742, 8.71427);
+    glVertex2f(2.71653, 8.60806);
+    glVertex2f(3.77284, 8.57551);
+    glEnd();
+    //batsignalcircle
+    circle(0.14, 3.44408, 8.9389, 42, 36, 44);
+    //batsignal base
+    glBegin(GL_POLYGON);
+    glColor3ub(41, 30, 31);
+    glVertex2f(3.52468, 8.70803);
+    glVertex2f(3.36497, 8.71002);
+    glVertex2f(3.23792, 8.68226);
+    glVertex2f(3.23372, 8.61494);
+    glVertex2f(3.6576, 8.61627);
+    glVertex2f(3.65499, 8.6822);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(63, 44, 45);
+    glVertex2f(3.51822, 8.81945);
+    glVertex2f(3.37, 8.82);
+    glVertex2f(3.36497, 8.71002);
+    glVertex2f(3.52468, 8.70803);
+    glEnd();
+
+    //ledge front
+    glBegin(GL_POLYGON);
+    glColor3ub(36, 26, 28);
+    glVertex2f(3.83093, 8.0086);
+    glVertex2f(2.05739, 8.04555);
+    glVertex2f(2.05739, 7.81646);
+    glVertex2f(3.83093, 7.79799);
+    glEnd();
+    //ledge side
+    glBegin(GL_POLYGON);
+    glColor3ub(71, 47, 42);
+    glVertex2f(4.72509, 8.27093);
+    glVertex2f(3.83093, 8.0086);
+    glVertex2f(3.83093, 7.79799);
+    glVertex2f(4.72879, 8.13792);
+    glEnd();
+    //ledge roof
+    glBegin(GL_POLYGON);
+    glColor3ub(33, 28, 32);
+    glVertex2f(4.72509, 8.27093);
+    glVertex2f(4.49224, 8.28727);
+    glVertex2f(2.05739, 8.04555);
+    glVertex2f(3.83093, 8.0086);
+    glEnd();
+    //roofFront
+    glBegin(GL_POLYGON);
+    glColor3ub(27, 25, 30);
+    glVertex2f(3.83123, 8.59049);
+    glVertex2f(2.27769, 8.5972);
+    glVertex2f(2.21334, 8.06255);
+    glVertex2f(3.8294, 8.00506);
+    glEnd();
+
+    //G
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.48574, 8.59784);
+    glVertex2f(2.27769, 8.5972);
+    glVertex2f(2.16383, 8.50314);
+    glVertex2f(2.25942, 8.46657);
+    glVertex2f(2.48066, 8.46849);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.25942, 8.46657);
+    glVertex2f(2.16383, 8.50314);
+    glVertex2f(2.15393, 8.17641);
+    glVertex2f(2.25942, 8.18593);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.25942, 8.18593);
+    glVertex2f(2.15393, 8.17641);
+    glVertex2f(2.21688, 8.04743);
+    glVertex2f(2.44112, 8.04842);
+    glVertex2f(2.50728, 8.12646);
+    glVertex2f(2.39701, 8.18583);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.51013, 8.34932);
+    glVertex2f(2.39713, 8.34932);
+    glVertex2f(2.39701, 8.18583);
+    glVertex2f(2.50728, 8.12646);
+    glEnd();
+    //c
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.91722, 8.59452);
+    glVertex2f(2.67088, 8.59452);
+    glVertex2f(2.70239, 8.45131);
+    glVertex2f(2.91435, 8.45274);
+
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.70239, 8.45131);
+    glVertex2f(2.67088, 8.59452);
+    glVertex2f(2.58638, 8.50716);
+    glVertex2f(2.58782, 8.12477);
+    glVertex2f(2.6537, 8.03597);
+    glVertex2f(2.70526, 8.1749);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(2.91214, 8.17385);
+    glVertex2f(2.70526, 8.1749);
+    glVertex2f(2.6537, 8.03597);
+    glVertex2f(2.91006, 8.035);
+    glEnd();
+    //p
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(3.11785, 8.19208);
+    glVertex2f(3.27149, 8.19208);
+    glVertex2f(3.3457, 8.26499);
+    glVertex2f(3.3444, 8.49805);
+    glVertex2f(3.27149, 8.57617);
+    glVertex2f(3.00588, 8.57877);
+    glVertex2f(3.00588, 8.03584);
+    glVertex2f(3.12306, 8.035);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(45, 30, 28);
+    glVertex2f(3.23503, 8.4642);
+    glVertex2f(3.11004, 8.4668);
+    glVertex2f(3.11004, 8.31968);
+    glVertex2f(3.23633, 8.32098);
+    glEnd();
+    //D
+    glBegin(GL_POLYGON);
+    glColor3ub(189, 120, 63);
+    glVertex2f(3.78056, 8.09443);
+    glVertex2f(3.77275, 8.49414);
+    glVertex2f(3.77275, 8.49414);
+    glVertex2f(3.40429, 8.57486);
+    glVertex2f(3.4, 8.01);
+    glVertex2f(3.71, 8.01);
+    glEnd();
+    glBegin(GL_TRIANGLES);
+    glColor3ub(189, 120, 63);
+    glVertex2f(3.77275, 8.49414);
+    glVertex2f(3.70505, 8.57617);
+    glVertex2f(3.66208, 8.44467);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(189, 120, 63);
+    glVertex2f(3.66208, 8.44467);
+    glVertex2f(3.70505, 8.57617);
+    glVertex2f(3.40429, 8.57486);
+    glVertex2f(3.52147, 8.44727);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(39, 30, 29);
+    glVertex2f(3.66208, 8.44467);
+    glVertex2f(3.52147, 8.44727);
+    glVertex2f(3.52017, 8.16474);
+    glVertex2f(3.66078, 8.16214);
+    glEnd();
+
+
+
+}
 void display() {
     glClearColor(11.0f, 27.0f, 43.0f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
@@ -2533,18 +2804,21 @@ void display() {
     //Objects
 
     sky();
-    policeBlimp();
+    //policeBlimp();
     npcBuildings();
     buildingNextTobuildingWithVerticleWindows();
     buildingWithVerticleWindows();
     wayneTower();
     Buildinginfrontbatman();
     batmanBuilding();
+    BatmanSignal();
+    GCPD();
     buildingfrontofgcpd();
     policeBuilding();
     buildingBeforeverticleWindows();
     buildingAboveBottomRight();
     bottomRightbuilding();
+
 
     Batman();
 
