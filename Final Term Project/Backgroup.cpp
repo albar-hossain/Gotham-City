@@ -72,7 +72,71 @@ void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int
     glEnd();
 }
 
+void npcBuildings() {
+    //1
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(3.7, 9.7);
+    glVertex2f(4.09292, 9.69558);
+    glVertex2f(4.09469, 10.06352);
+    glVertex2f(3.69844, 10.06883);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(4.01, 10.06);
+    glVertex2f(4.01159, 10.09184);
+    glVertex2f(3.76114, 10.09538);
+    glVertex2f(3.76114, 10.07);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(3.96, 10.09);
+    glVertex2f(3.96461, 10.15491);
+    glVertex2f(3.78603, 10.15815);
+    glVertex2f(3.78603, 10.12623);
+    glVertex2f(3.7606, 10.12623);
+    glVertex2f(3.76114, 10.09538);
+    glEnd();
+    //windows
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(177, 177, 177); // Building rgb(177, 177, 177)
+    glVertex2f(3.77253, 9.96882);
+    glVertex2f(3.77253, 10.05585);
+    glEnd();
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(177, 177, 177); // Building rgb(177, 177, 177)
+    glVertex2f(3.86135, 9.96882);
+    glVertex2f(3.86135, 10.05585);
+    glEnd();
 
+    //2
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(3.7, 9.7);
+    glVertex2f(4.09292, 9.69558);
+    glVertex2f(4.09469, 10.06352);
+    glVertex2f(3.69844, 10.06883);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(4.01, 10.06);
+    glVertex2f(4.01159, 10.09184);
+    glVertex2f(3.76114, 10.09538);
+    glVertex2f(3.76114, 10.07);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(3.96, 10.09);
+    glVertex2f(3.96461, 10.15491);
+    glVertex2f(3.78603, 10.15815);
+    glVertex2f(3.78603, 10.12623);
+    glVertex2f(3.7606, 10.12623);
+    glVertex2f(3.76114, 10.09538);
+    glEnd();
+
+}
 void Batman() {
     //ears
     glBegin(GL_TRIANGLES);
@@ -1886,7 +1950,7 @@ void display() {
     glMatrixMode(GL_MODELVIEW);
 
     //Objects
-
+    npcBuildings();
     buildingNextTobuildingWithVerticleWindows();
     buildingWithVerticleWindows();
     wayneTower();
@@ -1897,7 +1961,7 @@ void display() {
     buildingAboveBottomRight();
     bottomRightbuilding();
 
-    Batman();
+    // Batman();
     policeBlimp();
     glFlush(); // Render now
 
