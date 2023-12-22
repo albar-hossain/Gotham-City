@@ -72,6 +72,15 @@ void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int
     glEnd();
 }
 
+void sky() {
+    glBegin(GL_QUADS);
+    glColor3ub(11, 27, 43);
+    glVertex2f(-6, 0);
+    glVertex2f(6, 0);
+    glVertex2f(6, 17);
+    glVertex2f(-6, 17);
+    glEnd();
+}
 void npcBuildings() {
     //1st building
     glBegin(GL_POLYGON);
@@ -233,7 +242,22 @@ void npcBuildings() {
     glEnd();
 
     //6th building
-
+    //bottom portion
+    glBegin(GL_POLYGON);
+    glColor3ub(5, 13, 22);
+    glVertex2f(1.4, 6.89);
+    glVertex2f(2.1, 6.89);
+    glVertex2f(2.1, 8.8);
+    glVertex2f(1.4, 8.8);
+    glEnd();
+    //top portion
+    glBegin(GL_POLYGON);
+    glColor3ub(5, 13, 22);
+    glVertex2f(1.44571, 8.70817);
+    glVertex2f(2.1, 8.7001);
+    glVertex2f(2.1, 9.6);
+    glVertex2f(1.45564, 9.6);
+    glEnd();
 
 
 
@@ -1784,6 +1808,19 @@ void batmanBuilding() {
     glVertex2f(-1.32857, 1.61253);
     glVertex2f(-1.32902, 4.95088);
     glEnd();
+    //roof
+    glBegin(GL_POLYGON);
+    glColor3ub(44, 35, 38); // Building rgb(44, 35, 38)
+
+    glVertex2f(-6, 3);
+    glVertex2f(-1.3437, 4.92068);
+    glColor3ub(3, 10, 16); // Building rgb(16, 22, 29)
+    glVertex2f(-1.32404, 7.53384);
+
+    glVertex2f(-6.00025, 7.44631);
+    // glVertex2f(-1.32902, 4.95088);
+    glEnd();
+
     //building mid ledge
     glBegin(GL_POLYGON);
     glColor3ub(13, 20, 26); // Building rgb(18, 14, 16)
@@ -2224,7 +2261,7 @@ void policeBuilding() {
 }
 
 void display() {
-    glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
+    glClearColor(11.0f, 27.0f, 43.0f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
 
     glMatrixMode(GL_PROJECTION);
@@ -2233,6 +2270,9 @@ void display() {
     glMatrixMode(GL_MODELVIEW);
 
     //Objects
+
+    sky();
+    policeBlimp();
     npcBuildings();
     buildingNextTobuildingWithVerticleWindows();
     buildingWithVerticleWindows();
@@ -2245,7 +2285,7 @@ void display() {
     bottomRightbuilding();
 
     // Batman();
-    policeBlimp();
+
     glFlush(); // Render now
 
 }
