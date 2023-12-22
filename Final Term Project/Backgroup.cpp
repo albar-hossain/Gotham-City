@@ -1638,8 +1638,438 @@ void wayneTower() {
     glEnd();
 
 
+
+
+
+    //windows
+    // top tower
+
+    //First floor
+    glLineWidth(8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-6, 12.2);
+    glVertex2f(-6, 12.35512);
+    glEnd();
+
+    glLineWidth(0.6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.82864, 12.19709);
+    glVertex2f(-5.82696, 12.36184);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.65548, 12.20718);
+    glVertex2f(-5.65548, 12.37697);
+    glEnd();
+
+    glLineWidth(0.3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.57081, 12.20691);
+    glVertex2f(-5.57187, 12.38837);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.27218, 12.23071);
+    glVertex2f(-5.27386, 12.40219);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.16627, 12.23576);
+    glVertex2f(-5.16795, 12.41228);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.9225, 12.25425);
+    glVertex2f(-4.92418, 12.43077);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.9225, 12.25425);
+    glVertex2f(-4.92418, 12.43077);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.77624, 12.25425);
+    glVertex2f(-4.77792, 12.4459);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.67065, 12.26733);
+    glVertex2f(-4.67032, 12.45263);
+    glEnd();
+
+    // other side
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.30796, 12.27174);
+    glVertex2f(-4.30796, 12.46648);
+    glEnd();
+
+    glLineWidth(1.3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.22316, 12.25917);
+    glVertex2f(-4.22158, 12.44);
+    glEnd();
+
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.07239, 12.22619);
+    glVertex2f(-4.07239, 12.41308);
+    glEnd();
+
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.9012, 12.17908);
+    glVertex2f(-3.9012, 12.36911);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.80226, 12.15709);
+    glVertex2f(-3.80069, 12.34241);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.68715, 12.14272);
+    glVertex2f(-3.68553, 12.31153);
+    glEnd();
+
+    //Second floor
+    glLineWidth(8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-6, 11.93983);
+    glVertex2f(-6, 12.1);
+    glEnd();
+
+    glLineWidth(0.6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.66898, 11.95119);
+    glVertex2f(-5.67222, 12.12487);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.51153, 11.96418);
+    glVertex2f(-5.51316, 12.14434);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.35734, 11.97067);
+    glVertex2f(-5.35896, 12.15246);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.02288, 11.99095);
+    glVertex2f(-5.02288, 12.16607);
+    glEnd();
+
+    glLineWidth(5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.52891, 12.02093);
+    glVertex2f(-4.52891, 12.19138);
+    glEnd();
+
+
+    // // other side
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.26851, 12.00042);
+    glVertex2f(-4.26851, 12.19138);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.12489, 11.98937);
+    glVertex2f(-4.12332, 12.15666);
+    glEnd();
+
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.95918, 11.94518);
+    glVertex2f(-3.95761, 12.12352);
+    glEnd();
+
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.83766, 11.92151);
+    glVertex2f(-3.83609, 12.09353);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.73824, 11.90573);
+    glVertex2f(-3.73824, 12.07617);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.60567, 11.87574);
+    glVertex2f(-3.60251, 12.03987);
+    glEnd();
+
+
+    //Third floor
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.89957, 11.68573);
+    glVertex2f(-5.89783, 11.86974);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.75548, 11.69441);
+    glVertex2f(-5.75548, 11.87669);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.42043, 11.71177);
+    glVertex2f(-5.42043, 11.89405);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.17218, 11.7326);
+    glVertex2f(-5.17218, 11.90446);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.78158, 11.74822);
+    glVertex2f(-4.78158, 11.9305);
+    glEnd();
+
+    glLineWidth(0.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.59583, 11.76038);
+    glVertex2f(-4.59756, 11.93918);
+    glEnd();
+
+
+    // // other side
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.3198, 11.76558);
+    glVertex2f(-4.32327, 11.93398);
+    glEnd();
+
+    glLineWidth(2.6);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.11495, 11.71524);
+    glVertex2f(-4.11322, 11.90446);
+    glEnd();
+
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.95871, 11.69441);
+    glVertex2f(-3.95871, 11.86627);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.79379, 11.65795);
+    glVertex2f(-3.79205, 11.84023);
+    glEnd();
+
+
+    //Fourth floor
+    glLineWidth(0.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.91278, 11.4731);
+    glVertex2f(-5.91278, 11.61402);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.83157, 11.48505);
+    glVertex2f(-5.83157, 11.61402);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.37299, 11.50654);
+    glVertex2f(-5.3706, 11.64507);
+    glEnd();
+
+    glLineWidth(0.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.19146, 11.51132);
+    glVertex2f(-5.18907, 11.64746);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.87858, 11.50893);
+    glVertex2f(-4.87858, 11.6594);
+    glEnd();
+
+    glLineWidth(6.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.74932, 11.50893);
+    glVertex2f(-4.74932, 11.6594);
+    glEnd();
+
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.61932, 11.50549);
+    glVertex2f(-4.61749, 11.6776);
+    glEnd();
+
+
+    // // other side
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.24086, 11.51132);
+    glVertex2f(-4.24325, 11.66896);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.11666, 11.45638);
+    glVertex2f(-4.11666, 11.64985);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.90409, 11.42533);
+    glVertex2f(-3.90409, 11.59969);
+    glEnd();
+
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.70107, 11.3919);
+    glVertex2f(-3.70107, 11.56864);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.60131, 11.37732);
+    glVertex2f(-3.60075, 11.54715);
+    glEnd();
+
+    //filth floor
+    // other side
+    glLineWidth(1);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.15633, 11.21206);
+    glVertex2f(-4.1545, 11.37641);
+    glEnd();
+
+    glLineWidth(2.8);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.90798, 11.16824);
+    glVertex2f(-3.90798, 11.35998);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.79659, 11.15728);
+    glVertex2f(-3.79477, 11.34172);
+    glEnd();
+
+    //6th floor
+// other side
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.1194, 10.94825);
+    glVertex2f(-4.11947, 11.13577);
+    glEnd();
+
+    glLineWidth(1.6);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.05511, 10.94976);
+    glVertex2f(-4.05511, 11.12129);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.95193, 10.94146);
+    glVertex2f(-3.94974, 11.10762);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.8516, 10.93317);
+    glVertex2f(-3.85, 11.1);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.64642, 10.91355);
+    glVertex2f(-3.64728, 11.06418);
+    glEnd();
+
+
     // Tower Logo
-   //W
+       //W
     glBegin(GL_POLYGON);
     glColor3ub(152, 94, 64);
     glVertex2f(-5.82666, 11.08687);
@@ -1791,6 +2221,594 @@ void wayneTower() {
     glVertex2f(-4.26972, 11.32539);
     glEnd();
 
+    //Bottom tower windows
+    //1
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.98092, 10.45406);
+    glVertex2f(-5.98092, 10.66696);
+    glEnd();
+
+    glLineWidth(4.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.67472, 10.44968);
+    glVertex2f(-5.67472, 10.67145);
+    glEnd();
+
+    glLineWidth(4.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.41659, 10.45695);
+    glVertex2f(-5.41659, 10.67872);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.45317, 10.48967);
+    glVertex2f(-4.45681, 10.7078);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.13856, 10.47257);
+    glVertex2f(-5.13856, 10.68547);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.78989, 10.488);
+    glVertex2f(-4.78989, 10.7009);
+    glEnd();
+
+    // // other side
+    glLineWidth(1.9);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.99072, 10.45714);
+    glVertex2f(-3.99072, 10.69165);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.84262, 10.4664);
+    glVertex2f(-3.84262, 10.67313);
+    glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.56492, 10.4232);
+    glVertex2f(-3.56492, 10.64228);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.3335, 10.41703);
+    glVertex2f(-3.3335, 10.62685);
+    glEnd();
+
+    glLineWidth(3.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.11238, 10.39604);
+    glVertex2f(-3.11238, 10.60168);
+    glEnd();
+
+
+    //2
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.98092, 10.45406 - 0.1091200000);
+    glVertex2f(-5.98092, 10.66696 - 0.54237);
+    glEnd();
+
+    // glLineWidth(4.5);
+    // glBegin(GL_LINES);
+    // glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    // glVertex2f(-5.67472, 10.44968 - 0.1091200000);
+    // glVertex2f(-5.67472, 10.67145 - 0.54237);
+    // glEnd();
+
+    glLineWidth(4.5);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.41659, 10.45695 - 0.1091200000);
+    glVertex2f(-5.41659, 10.67872 - 0.54237);
+    glEnd();
+
+    // glLineWidth(3);
+    // glBegin(GL_LINES);
+    // glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    // glVertex2f(-4.45317, 10.48967 - 0.1091200000);
+    // glVertex2f(-4.45681, 10.7078 - 0.54237);
+    // glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.13856, 10.47257 - 0.1091200000);
+    glVertex2f(-5.13856, 10.68547 - 0.54237);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.78989, 10.488 - 0.1091200000);
+    glVertex2f(-4.78989, 10.7009 - 0.54237);
+    glEnd();
+
+    // // other side
+    glLineWidth(1.9);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.99072, 10.45714 - 0.0899600000);
+    glVertex2f(-3.99072, 10.69165 - 0.54814);
+    glEnd();
+
+    // glLineWidth(3);
+    // glBegin(GL_LINES);
+    // glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    // glVertex2f(-3.84262, 10.4664 - 0.0899600000);
+    // glVertex2f(-3.84262, 10.67313 - 0.54814);
+    // glEnd();
+
+    glLineWidth(2);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.56492, 10.4232 - 0.0899600000);
+    glVertex2f(-3.56492, 10.64228 - 0.54814);
+    glEnd();
+
+    // glLineWidth(4);
+    // glBegin(GL_LINES);
+    // glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    // glVertex2f(-3.3335, 10.41703 - 0.0899600000);
+    // glVertex2f(-3.3335, 10.62685 - 0.54814);
+    // glEnd();
+
+    glLineWidth(3.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.11238, 10.39604 - 0.0828500000);
+    glVertex2f(-3.11238, 10.60168 - 0.54814);
+    glEnd();
+
+
+    //3
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.90908, 9.8218);
+    glVertex2f(-5.90639, 10.03484);
+    glEnd();
+
+    glLineWidth(8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.51537, 9.8272);
+    glVertex2f(-5.51807, 10.04293);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.15942, 9.83259);
+    glVertex2f(-5.15942, 10.04293);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.45317, 10.48967);
+    glVertex2f(-4.45681, 10.7078);
+    glEnd();
+
+    glLineWidth(2.6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.74414, 9.82989);
+    glVertex2f(-4.74414, 10.04293);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.56616, 9.84068);
+    glVertex2f(-4.56347, 10.04832);
+    glEnd();
+
+    glLineWidth(2.8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.35313, 9.83798);
+    glVertex2f(-4.35583, 10.05641);
+    glEnd();
+
+    // // other side
+    glLineWidth(1.9);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.99072, 9.82102);
+    glVertex2f(-3.98908, 10.03753);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.76737, 9.8151);
+    glVertex2f(-3.76737, 10.0207);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.52918, 9.82302);
+    glVertex2f(-3.52918, 10.01124);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.2, 9.8);
+    glVertex2f(-3.2, 10);
+    glEnd();
+
+    glLineWidth(3.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.0688, 9.81793);
+    glVertex2f(-3.0688, 9.99853);
+    glEnd();
+
+
+    //4
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.90908, 9.8218 - 0.0879000000);
+    glVertex2f(-5.90639, 10.03484 - 0.5219900000);
+    glEnd();
+
+    // glLineWidth(8);
+    // glBegin(GL_LINES);
+    // glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    // glVertex2f(-5.51537, 9.8272 - 0.0879000000);
+    // glVertex2f(-5.51807, 10.04293 - 0.5219900000);
+    // glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.15942, 9.83259 - 0.0879000000);
+    glVertex2f(-5.15942, 10.04293 - 0.5219900000);
+    glEnd();
+
+    // glLineWidth(3);
+    // glBegin(GL_LINES);
+    // glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    // glVertex2f(-4.45317, 10.48967 - 0.0879000000);
+    // glVertex2f(-4.45681, 10.7078 - 0.5219900000);
+    // glEnd();
+
+    glLineWidth(2.6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.74414, 9.82989 - 0.0879000000);
+    glVertex2f(-4.74414, 10.04293 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.56616, 9.84068 - 0.0879000000);
+    glVertex2f(-4.56347, 10.04832 - 0.5219900000);
+    glEnd();
+
+    // glLineWidth(2.8);
+    // glBegin(GL_LINES);
+    // glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    // glVertex2f(-4.35313, 9.83798 - 0.0879000000);
+    // glVertex2f(-4.35583, 10.05641 - 0.5219900000);
+    // glEnd();
+
+    // // other side
+    glLineWidth(1.9);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.99072, 9.82102 - 0.12102);
+    glVertex2f(-3.98908, 10.03753 - 0.53753);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.76737, 9.8151 - 0.12102);
+    glVertex2f(-3.76737, 10.0207 - 0.53753);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.52918, 9.82302 - 0.12102);
+    glVertex2f(-3.52918, 10.01124 - 0.53753);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.2, 9.8 - 0.12102);
+    glVertex2f(-3.2, 10 - 0.53753);
+    glEnd();
+
+    glLineWidth(3.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.0688, 9.81793 - 0.12102);
+    glVertex2f(-3.0688, 9.99853 - 0.53753);
+    glEnd();
+
+    //4
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.90908, 9.8218 - 0.0879000000);
+    glVertex2f(-5.90639, 10.03484 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.51537, 9.8272 - 0.0879000000);
+    glVertex2f(-5.51807, 10.04293 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.15942, 9.83259 - 0.0879000000);
+    glVertex2f(-5.15942, 10.04293 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.45317, 10.48967 - 0.0879000000);
+    glVertex2f(-4.45681, 10.7078 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(2.6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.74414, 9.82989 - 0.0879000000);
+    glVertex2f(-4.74414, 10.04293 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.56616, 9.84068 - 0.0879000000);
+    glVertex2f(-4.56347, 10.04832 - 0.5219900000);
+    glEnd();
+
+    glLineWidth(2.8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.35313, 9.83798 - 0.0879000000);
+    glVertex2f(-4.35583, 10.05641 - 0.5219900000);
+    glEnd();
+
+    // // other side
+    glLineWidth(1.9);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.99072, 9.82102 - 0.12102);
+    glVertex2f(-3.98908, 10.03753 - 0.53753);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.76737, 9.8151 - 0.12102);
+    glVertex2f(-3.76737, 10.0207 - 0.53753);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.52918, 9.82302 - 0.12102);
+    glVertex2f(-3.52918, 10.01124 - 0.53753);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.2, 9.8 - 0.12102);
+    glVertex2f(-3.2, 10 - 0.53753);
+    glEnd();
+
+    glLineWidth(3.5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.0688, 9.81793 - 0.12102);
+    glVertex2f(-3.0688, 9.99853 - 0.53753);
+    glEnd();
+
+    //5
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.85116, 8.87818);
+    glVertex2f(-5.85116, 9.40239);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.54006, 8.86348);
+    glVertex2f(-5.53761, 9.40729);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.34165, 8.86838);
+    glVertex2f(-5.33675, 9.39994);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.033, 8.86348);
+    glVertex2f(-5.033, 9.40729);
+    glEnd();
+
+    glLineWidth(8);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.75864, 8.85123);
+    glVertex2f(-4.75619, 9.40239);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.32017, 8.86348);
+    glVertex2f(-4.31282, 9.40484);
+    glEnd();
+
+
+    // // other side
+    glLineWidth(2.4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.00295, 8.83609);
+    glVertex2f(-4, 9.4);
+    glEnd();
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.79981, 8.84668);
+    glVertex2f(-3.8, 9.4);
+    glEnd();
+
+    glLineWidth(5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.66697, 8.86091);
+    glVertex2f(-3.66697, 9.38281);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.43863, 8.90885);
+    glVertex2f(-3.44185, 9.37627);
+    glEnd();
+
+
+    //6
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.85116, 8.87818 - 0.0993200000);
+    glVertex2f(-5.85116, 8.38606 - 1.01633);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.54006, 8.86348 - 0.0993200000);
+    glVertex2f(-5.53761, 9.40729 - 1.01633);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.34165, 8.86838 - 0.0993200000);
+    glVertex2f(-5.33675, 9.39994 - 1.01633);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-5.033, 8.86348 - 0.0993200000);
+    glVertex2f(-5.033, 9.40729 - 1.01633);
+    glEnd();
+
+    // glLineWidth(8);
+    // glBegin(GL_LINES);
+    // glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    // glVertex2f(-4.75864, 8.85123 - 0.0993200000);
+    // glVertex2f(-4.75619, 9.40239 - 1.01633);
+    // glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(225, 167, 118); // Building rgb(225, 167, 118)
+    glVertex2f(-4.32017, 8.86348 - 0.0993200000);
+    glVertex2f(-4.31282, 9.40484 - 1.01633);
+    glEnd();
+
+
+    // // other side
+    glLineWidth(2.4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-4.00295, 8.83609 - 0.1059200000);
+    glVertex2f(-4, 9.4 - 1.14704);
+    glEnd();
+
+    // glLineWidth(3);
+    // glBegin(GL_LINES);
+    // glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    // glVertex2f(-3.79981, 8.84668 - 0.1059200000);
+    // glVertex2f(-3.8, 9.4 - 1.14704 - 1.01633);
+    // glEnd();
+
+    glLineWidth(5);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.66697, 8.86091 - 0.1059200000);
+    glVertex2f(-3.66697, 9.38281 - 1.01633);
+    glEnd();
+
+    glLineWidth(6);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.43863, 8.90885 - 0.1059200000);
+    glVertex2f(-3.44185, 9.37627 - 1.01633);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.20366, 8.92095);
+    glVertex2f(-3.20366, 9.7342);
+    glEnd();
+
+
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.67289, 8.48554);
+    glVertex2f(-3.67289, 8.75533);
+    glEnd();
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(180, 125, 71); // Building rgb(180, 125, 71)
+    glVertex2f(-3.1326, 7.65514);
+    glVertex2f(-3.12956, 8.89564);
+    glEnd();
 
 
 }
@@ -2664,6 +3682,22 @@ void GCPD() {
     glVertex2f(3.83093, 7.79799);
     glVertex2f(4.72879, 8.13792);
     glEnd();
+    //buildingFront
+    glBegin(GL_POLYGON);
+    glColor3ub(38, 31, 31);
+    glVertex2f(3.83093, 7.79799);
+    glVertex2f(2.17, 7.82);
+    glVertex2f(2.18552, 5.18176);
+    glVertex2f(3.86875, 5.14393);
+    glEnd();
+    //buildingside
+    glBegin(GL_POLYGON);
+    glColor3ub(58, 41, 37);
+    glVertex2f(4.6, 8.09);
+    glVertex2f(3.83093, 7.79799);
+    glVertex2f(3.86875, 5.14393);
+    glVertex2f(4.64537, 5.36684);
+    glEnd();
     //ledge roof
     glBegin(GL_POLYGON);
     glColor3ub(33, 28, 32);
@@ -2671,6 +3705,14 @@ void GCPD() {
     glVertex2f(4.49224, 8.28727);
     glVertex2f(2.05739, 8.04555);
     glVertex2f(3.83093, 8.0086);
+    glEnd();
+    //roofside
+    glBegin(GL_POLYGON);
+    glColor3ub(91, 58, 50);
+    glVertex2f(4.48297, 8.68795);
+    glVertex2f(3.83119, 8.59);
+    glVertex2f(3.83093, 8.0086);
+    glVertex2f(4.48861, 8.22731);
     glEnd();
     //roofFront
     glBegin(GL_POLYGON);
