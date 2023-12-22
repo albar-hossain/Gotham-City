@@ -1798,6 +1798,61 @@ void wayneTower() {
 
 void batmanBuilding() {
 
+    glBegin(GL_POLYGON);
+    glColor3ub(80, 43, 34);
+    glVertex2f(-0.97917, 5.33827);
+    glVertex2f(-5.99, 3.13);
+    glColor3ub(33, 19, 14);
+    glVertex2f(-5.9889, 2.82377);
+    glVertex2f(-0.95053, 5.10231);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(23, 20, 24);
+    glVertex2f(-0.74582, 6.34003);
+    glVertex2f(-5.99, 4.71);
+    glColor3ub(64, 37, 33);
+    glVertex2f(-5.99, 3.13);
+    glVertex2f(-1.1, 5.2);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(22, 19, 20);
+    glVertex2f(-0.74884, 7.18447);
+    glVertex2f(-6, 6);
+    glColor3ub(20, 16, 16);
+    glVertex2f(-5.99, 4.71);
+    glVertex2f(-0.74582, 6.34003);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(33, 19, 16);
+    glVertex2f(-5.99227, 7.2242);
+    glVertex2f(-6.01016, 6.63301);
+    glColor3ub(36, 24, 21);
+    glVertex2f(-2.89229, 7.2105);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(35, 22, 21);
+    glVertex2f(-0.74884, 7.18447);
+    glVertex2f(-2.89229, 7.2105);
+    glColor3ub(32, 20, 14);
+    glVertex2f(-6.01016, 6.63301);
+    glVertex2f(-6., 6);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(32, 19, 14);
+    glVertex2f(-0.77763, 7.6);
+    glVertex2f(-5.98641, 7.71089);
+    // glColor3ub(32, 20, 14);
+    glVertex2f(-5.99227, 7.2242);
+    glVertex2f(-0.74884, 7.18447);
+    glEnd();
+
+
+
     //building body
     glBegin(GL_POLYGON);
     glColor3ub(18, 14, 16); // Building rgb(18, 14, 16)
@@ -1809,17 +1864,17 @@ void batmanBuilding() {
     glVertex2f(-1.32902, 4.95088);
     glEnd();
     //roof
-    glBegin(GL_POLYGON);
-    glColor3ub(44, 35, 38); // Building rgb(44, 35, 38)
+    // glBegin(GL_POLYGON);
+    // glColor3ub(44, 35, 38); // Building rgb(44, 35, 38)
 
-    glVertex2f(-6, 3);
-    glVertex2f(-1.3437, 4.92068);
-    glColor3ub(3, 10, 16); // Building rgb(16, 22, 29)
-    glVertex2f(-1.32404, 7.53384);
+    // glVertex2f(-6, 3);
+    // glVertex2f(-1.3437, 4.92068);
+    // glColor3ub(3, 10, 16); // Building rgb(16, 22, 29)
+    // glVertex2f(-1.32404, 7.53384);
 
-    glVertex2f(-6.00025, 7.44631);
-    // glVertex2f(-1.32902, 4.95088);
-    glEnd();
+    // glVertex2f(-6.00025, 7.44631);
+    // // glVertex2f(-1.32902, 4.95088);
+    // glEnd();
 
     //building mid ledge
     glBegin(GL_POLYGON);
@@ -2284,7 +2339,7 @@ void display() {
     buildingAboveBottomRight();
     bottomRightbuilding();
 
-    // Batman();
+    Batman();
 
     glFlush(); // Render now
 
