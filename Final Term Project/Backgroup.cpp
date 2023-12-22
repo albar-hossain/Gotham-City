@@ -72,6 +72,103 @@ void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int
     glEnd();
 }
 
+
+void Batman() {
+    //ears
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-2.80023, 11.52965);
+    glVertex2f(-2.9167, 11.04715);
+    glVertex2f(-2.69428, 11.2895);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-2.25283, 11.53537);
+    glVertex2f(-2.41775, 11.29193);
+    glVertex2f(-2.11756, 11.04414);
+    glEnd();
+
+    //head
+    glBegin(GL_POLYGON);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-2.41775, 11.29193);
+    glVertex2f(-2.69428, 11.2895);
+    glVertex2f(-2.9167, 11.04715);
+    glVertex2f(-2.11756, 11.04414);
+    glEnd();
+    //body
+    glBegin(GL_POLYGON);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-2.11756, 11.04414);
+    glVertex2f(-2.9167, 11.04715);
+    glVertex2f(-3.54039, 10.58904);
+    glVertex2f(-1.60743, 10.55441);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-1.60743, 10.55441);
+    glVertex2f(-3.54039, 10.58904);
+    glVertex2f(-3.9962, 7.60101);
+    glVertex2f(-1.27121, 7.64028);
+    glEnd();
+
+    //cape bottom
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-3.9962, 7.60101);
+    glVertex2f(-4.12707, 7.2997);
+    glVertex2f(-3.8, 7.6);
+    glEnd();
+    //2
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-3.8, 7.6);
+    glVertex2f(-3.66552, 7.28612);
+    glVertex2f(-3.5343, 7.60287);
+    glEnd();
+    //3
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-3.5241, 7.6234);
+    glVertex2f(-3.28091, 7.30422);
+    glVertex2f(-3.07276, 7.62097);
+    glEnd();
+    //4
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-3.07276, 7.62097);
+    glVertex2f(-2.89177, 7.29065);
+    glVertex2f(-2.59312, 7.63002);
+    glEnd();
+
+    //5
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-2.59312, 7.63002);
+    glVertex2f(-2.4257, 7.29517);
+    glVertex2f(-2.13158, 7.62549);
+    glEnd();
+
+    //6
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-2.13158, 7.62549);
+    glVertex2f(-1.86009, 7.29065);
+    glVertex2f(-1.65647, 7.63002);
+    glEnd();
+
+    //7
+    glBegin(GL_TRIANGLES);
+    glColor3ub(0, 0, 0);
+    glVertex2f(-1.65647, 7.63002);
+    glVertex2f(-1.18588, 7.27707);
+    glVertex2f(-1.27121, 7.64028);
+    glEnd();
+
+}
+
 void policeBlimp() {
     drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
 
@@ -1734,6 +1831,7 @@ void display() {
     buildingAboveBottomRight();
     bottomRightbuilding();
 
+    Batman();
     policeBlimp();
     glFlush(); // Render now
 
