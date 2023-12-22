@@ -73,7 +73,7 @@ void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int
 }
 
 void npcBuildings() {
-    //1
+    //1st building
     glBegin(GL_POLYGON);
     glColor3ub(9, 16, 27);
     glVertex2f(3.7, 9.7);
@@ -154,7 +154,114 @@ void npcBuildings() {
         glVertex2f(i, 9.89546);
         glEnd();
     }
-    //2nd
+
+
+
+
+    //4th building
+    glBegin(GL_POLYGON);
+    glColor3ub(83, 51, 43);
+    glVertex2f(2.02467, 9.06197);
+    glVertex2f(2.50558, 9.05428);
+    glVertex2f(2.51859, 9.89731);
+    glVertex2f(2.03375, 9.89659);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(83, 51, 43);
+    glVertex2f(2.50558, 9.05428);
+    glVertex2f(2.7748, 9.06163);
+    glVertex2f(2.78016, 9.88658);
+    glVertex2f(2.51859, 9.89731);
+    glEnd();
+    //ledge
+    glBegin(GL_POLYGON);
+    glColor3ub(83, 51, 43);
+    glVertex2f(2.01189, 9.89686);
+    glVertex2f(2.51859, 9.89731);
+    glVertex2f(2.51562, 9.95296);
+    glVertex2f(2.01249, 9.94572);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(83, 51, 43);
+    glVertex2f(2.51859, 9.89731);
+    glVertex2f(2.78016, 9.88658);
+    glVertex2f(2.78166, 9.93306);
+    glVertex2f(2.51562, 9.95296);
+    glEnd();
+    //top
+    glBegin(GL_POLYGON);
+    glColor3ub(83, 51, 43);
+    glVertex2f(2.23, 9.95);
+    glVertex2f(2.48, 9.95);
+    glVertex2f(2.48003, 10.02174);
+    glVertex2f(2.33283, 10.02355);
+    glVertex2f(2.33464, 9.9783);
+    glVertex2f(2.22545, 9.9783);
+    glEnd();
+
+    //5th building
+    glBegin(GL_POLYGON);
+    glColor3ub(120, 72, 45);
+    glVertex2f(2.07808, 9.05872);
+    glVertex2f(2.27397, 9.05519);
+    glVertex2f(2.27554, 9.75256);
+    glVertex2f(2.08364, 9.75256);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(120, 72, 45);
+    glVertex2f(2.27397, 9.05519);
+    glVertex2f(2.47815, 9.13477);
+    glVertex2f(2.48476, 9.75868);
+    glVertex2f(2.27554, 9.75256);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(120, 72, 45);
+    glVertex2f(1.74795, 9.35141);
+    glVertex2f(1.91479, 9.35023);
+    glVertex2f(1.91479, 9.75677);
+    glVertex2f(1.74912, 9.75794);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(120, 72, 45);
+    glVertex2f(1.91479, 9.35023);
+    glVertex2f(2.08, 9.35);
+    glVertex2f(2.08364, 9.75256);
+    glVertex2f(1.97204, 9.75098);
+    glVertex2f(1.97303, 9.78258);
+    glVertex2f(1.91479, 9.75677);
+    glEnd();
+
+    //6th building
+
+
+
+
+    //3rd building 
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(3.08383, 8.57307);
+    glVertex2f(3.23353, 8.65178);
+    glVertex2f(3.23662, 9.35863);
+    glVertex2f(3.08537, 9.36017);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(2.5236, 8.56381);
+    glVertex2f(3.08383, 8.57307);
+    glVertex2f(3.08537, 9.36017);
+    glVertex2f(2.52977, 9.36171);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(2.85233, 9.36);
+    glVertex2f(3, 9.36);
+    glVertex2f(2.99432, 9.4574);
+    glVertex2f(2.85387, 9.46049);
+    glEnd();
+
+
+    //2nd building
     glLineWidth(2);
     glBegin(GL_LINES);
     glColor3ub(191, 175, 128); // Building rgb(191, 175, 128)
@@ -310,8 +417,6 @@ void npcBuildings() {
     glVertex2f(3.86536, 9.441);
     glVertex2f(3.63368, 9.43908);
     glEnd();
-
-
 
 
 }
