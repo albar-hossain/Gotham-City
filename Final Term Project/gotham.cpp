@@ -13,21 +13,6 @@ float blimpSpeed = 0.001;
 bool blimpForward = true;
 bool saveGotham = false;
 
-void updateBlimp(int value) {
-    if (blimpForward) {
-        blimpX += blimpSpeed;
-    }
-    else {
-        blimpX -= blimpSpeed;
-    }
-    if (blimpX > 4.6) {
-        blimpX = -9.0;
-    }
-
-    glutPostRedisplay();
-    glutTimerFunc(16.66, updateBlimp, 0);
-}
-
 void circle(float radius, float xc, float yc, float r, float g, float b)
 {
     glBegin(GL_POLYGON);
@@ -244,7 +229,26 @@ void npcBuildings() {
     glVertex2f(2.99432, 9.4574);
     glVertex2f(2.85387, 9.46049);
     glEnd();
-    //Add missing windows
+    // windows
+    glPointSize(3);
+    glColor3ub(255, 248, 148);
+    glBegin(GL_POINTS);
+    glVertex2f(2.81162, 9.13532);
+    glVertex2f(2.6223, 9.13237);
+    glVertex2f(2.95065, 9.1368);
+    glVertex2f(2.81162, 9.13532 - 0.10797);
+    glVertex2f(2.6223, 9.13237 - 0.10797); //9.02735
+    glVertex2f(2.95065, 9.1368 - 0.10797);
+    glVertex2f(2.81162, 9.02735 - 0.10797);
+    glVertex2f(2.6223, 9.02735 - 0.10797); //8.91938
+    glVertex2f(2.95065, 9.02735 - 0.10797);
+    glVertex2f(2.81162, 8.91938 - 0.10797);
+    glVertex2f(2.6223, 8.91938 - 0.10797); //8.91938
+    glVertex2f(2.95065, 8.91938 - 0.10797);
+    glVertex2f(2.81162, 8.81141 - 0.10797);
+    glVertex2f(2.6223, 8.81141 - 0.10797); //8.91938
+    glVertex2f(2.95065, 8.81141 - 0.10797);
+    glEnd();
 
     //2nd building
     glLineWidth(2);
@@ -3916,6 +3920,21 @@ void buildingInMiddleInfrontOfBatman() {
     glVertex2f(0.29365, 9.98114);
     glVertex2f(-0.1926, 10.02238);
     glEnd();
+}
+
+void updateBlimp(int value) {
+    if (blimpForward) {
+        blimpX += blimpSpeed;
+    }
+    else {
+        blimpX -= blimpSpeed;
+    }
+    if (blimpX > 4.6) {
+        blimpX = -9.0;
+    }
+
+    glutPostRedisplay();
+    glutTimerFunc(16.66, updateBlimp, 0);
 }
 
 void playMusic() {
