@@ -7,13 +7,19 @@
 //play sound
 #include<mmsystem.h>
 
-
+void display();
+void displayGotham();
+void displayBat();
 
 float blimpX = 2.19;  // Initial x-coordinate of the ellipse
 float blimpSpeed = 0.001;     // blimpSpeed of movement
 bool blimpReverse = true;  // Flag to indicate the direction of movement
 
-//testing commit
+// void init() {
+//     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+//     displayGotham();
+// }
+
 void updateBlimp(int value) {
     // Update the x-coordinate of the ellipse based on the direction of movement
     if (blimpReverse) {
@@ -521,8 +527,51 @@ void Batman() {
 
 }
 
+// void policeBlimp() {
+//     drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
+
+//     // //light
+//     // glBegin(GL_QUADS);
+//     // glColor3ub(177, 160, 53);
+//     // glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
+//     // glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
+//     // glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
+//     // glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+//     // glEnd();
+
+//     //light with gradient transparency
+//     glBegin(GL_QUADS);
+//     glColor4ub(177, 160, 53, 255); // Solid color at the bottom
+//     glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
+//     glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
+//     glColor4ub(177, 160, 53, 1); // Semi-transparent color at the top
+//     glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
+//     glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+//     glEnd();
+
+//     //box
+//     glBegin(GL_QUADS);
+//     glColor3ub(71, 66, 72);
+//     glVertex2f((1.96175 - 2.19) + blimpX, 14.07416);
+//     glVertex2f((2.31214 - 2.19) + blimpX, 14.07416);
+//     glVertex2f((2.32 - 2.19) + blimpX, 14.21);
+//     glVertex2f((1.94 - 2.19) + blimpX, 14.21);
+
+//     //glass
+
+//     glBegin(GL_QUADS);
+//     glColor3ub(88, 96, 104);
+//     glVertex2f((1.99719 - 2.19) + blimpX, 14.1616);
+//     glVertex2f((1.99962 - 2.19) + blimpX, 14.12766);
+//     glVertex2f((2.31356 - 2.19) + blimpX, 14.12766);
+//     glVertex2f((2.31356 - 2.19) + blimpX, 14.1616);
+//     glEnd();
+
+// }
+
+
 void policeBlimp() {
-    drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
+    drawEllipse(2.19, 14.51, 0.75, 0.32, 100, 57, 52, 57);
 
     // //light
     // glBegin(GL_QUADS);
@@ -533,31 +582,32 @@ void policeBlimp() {
     // glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
     // glEnd();
 
-
-        //light with gradient transparency
+    //light with gradient transparency
     glBegin(GL_QUADS);
     glColor4ub(177, 160, 53, 255); // Solid color at the bottom
-    glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
-    glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
+    glVertex2f(2.12859, 14.08628);
+    glVertex2f(2.31533, 10.89752);
     glColor4ub(177, 160, 53, 1); // Semi-transparent color at the top
-    glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
-    glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+    glVertex2f(3.98194, 11.23578);
+    glVertex2f(2.31181, 14.08628);
     glEnd();
+
     //box
     glBegin(GL_QUADS);
     glColor3ub(71, 66, 72);
-    glVertex2f((1.96175 - 2.19) + blimpX, 14.07416);
-    glVertex2f((2.31214 - 2.19) + blimpX, 14.07416);
-    glVertex2f((2.32 - 2.19) + blimpX, 14.21);
-    glVertex2f((1.94 - 2.19) + blimpX, 14.21);
-    glEnd();
+    glVertex2f(1.96175, 14.07416);
+    glVertex2f(2.31214, 14.07416);
+    glVertex2f(2.32, 14.21);
+    glVertex2f(1.94, 14.21);
+
     //glass
+
     glBegin(GL_QUADS);
     glColor3ub(88, 96, 104);
-    glVertex2f((1.99719 - 2.19) + blimpX, 14.1616);
-    glVertex2f((1.99962 - 2.19) + blimpX, 14.12766);
-    glVertex2f((2.31356 - 2.19) + blimpX, 14.12766);
-    glVertex2f((2.31356 - 2.19) + blimpX, 14.1616);
+    glVertex2f(1.99719, 14.1616);
+    glVertex2f(1.99962, 14.12766);
+    glVertex2f(2.31356, 14.12766);
+    glVertex2f(2.31356, 14.1616);
     glEnd();
 
 }
@@ -3961,20 +4011,28 @@ void buildingInMiddleInfrontOfBatman() {
 }
 
 
-void display() {
-    glClearColor(11.0f, 27.0f, 43.0f, 0.0f); // Set background color to black and opaque
+
+
+
+
+
+
+
+void displayBat() {
+    glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(-6, 6, 0, 17);
     glMatrixMode(GL_MODELVIEW);
-
     //Objects
-
     sky();
+    glPushMatrix();
     policeBlimp();
-
+    glTranslatef(blimpX, 0.0, 0.0);
+    glPopMatrix();
+    glutSwapBuffers();
     npcBuildings();
     buildingNextTobuildingWithVerticleWindows();
     buildingWithVerticleWindows();
@@ -3990,31 +4048,99 @@ void display() {
     buildingBeforeverticleWindows();
     buildingAboveBottomRight();
     bottomRightbuilding();
-
     Batman();
 
     glFlush(); // Render now
 
 }
 
+
+void displayGotham() {
+    glClearColor(1.0f, 1.0f, 1.0f, 0.0f); // Set background color to black and opaque
+    glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-6, 6, 0, 17);
+    glMatrixMode(GL_MODELVIEW);
+    //Objects
+    sky();
+    npcBuildings();
+    buildingNextTobuildingWithVerticleWindows();
+    buildingWithVerticleWindows();
+    wayneTower();
+    buildingInMiddleInfrontOfBatman();
+    buldingBehindBuildinginfrontbatman();
+    Buildinginfrontbatman();
+    batmanBuilding();
+    GCPD();
+    buildingfrontofgcpd();
+    policeBuilding();
+    buildingBeforeverticleWindows();
+    buildingAboveBottomRight();
+    bottomRightbuilding();
+    glFlush(); // Render now
+
+}
+
+
+void display() {
+    glClearColor(11.0f, 27.0f, 43.0f, 0.0f); // Set background color to black and opaque
+    glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-6, 6, 0, 17);
+    glMatrixMode(GL_MODELVIEW);
+    // displayGotham();
+    displayBat();
+    glFlush();
+}
+
+void handleKeypress(unsigned char key, int x, int y) {
+    switch (key) {
+    case 'B':
+    case 'b':
+        displayBat();
+        break;
+    case 'N':
+    case 'n':
+        displayGotham();
+        break;
+        glutPostRedisplay();
+    }
+}
+
+void handleMouse(int button, int state, int x, int y) {
+    if (button == GLUT_LEFT_BUTTON)
+    {
+        blimpSpeed += 0.001f;
+    }
+    if (button == GLUT_RIGHT_BUTTON)
+    {
+        blimpSpeed -= 0.001f;
+    }
+    glutPostRedisplay();
+}
 int main(int argc, char** argv) {
     glutInit(&argc, argv); // Initialize GLUT
 
     glutInitWindowSize(750, 1040);
-    glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 750) / 2,
-        (glutGet(GLUT_SCREEN_HEIGHT) - 1061) / 2);
+    // glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 750) / 2,
+    //     (glutGet(GLUT_SCREEN_HEIGHT) - 1061) / 2);
     glutCreateWindow("Batman"); // Create a window with the given title
     // Set the window's initial width & height
     // gluOrtho2D(-6, 6, 0, 17);
+
     glutDisplayFunc(display); // Register display callback handler for window re-paint
     // Initialize updateBlimp function and timer
-    glutTimerFunc(0, updateBlimp, 0);
-
-
+    glutTimerFunc(200, updateBlimp, 0);
     //Code to play music
-    // sndPlaySound("bat.wav", SND_ASYNC);
+    sndPlaySound("bat.wav", SND_ASYNC);
     // sndPlaySound("instrumental.wav", SND_ASYNC);
     // PlaySound("instrumental.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+    glutKeyboardFunc(handleKeypress);
+    glutMouseFunc(handleMouse);
     glutMainLoop(); // Enter the event-processing loop
     return 0;
 }

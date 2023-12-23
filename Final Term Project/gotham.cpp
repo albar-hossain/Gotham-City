@@ -1,43 +1,36 @@
-#include <GL/glut.h>
 #include <iostream>
+#include <GL/glut.h>
+#include<GL/gl.h>
 #include<math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-//play sound
 #include<mmsystem.h>
+using namespace std;
 
+float blimpX = 2.19;
+float blimpSpeed = 0.001;
+bool blimpForward = true;
+bool saveGotham = false;
 
-
-float blimpX = 2.19;  // Initial x-coordinate of the ellipse
-float blimpSpeed = 0.001;     // blimpSpeed of movement
-bool blimpReverse = true;  // Flag to indicate the direction of movement
-
-//testing commit
 void updateBlimp(int value) {
-    // Update the x-coordinate of the ellipse based on the direction of movement
-    if (blimpReverse) {
+    if (blimpForward) {
         blimpX += blimpSpeed;
     }
     else {
         blimpX -= blimpSpeed;
     }
-
-    // Check if the blimp has reached the right or left edge
-    if (blimpX >= 4.3) {
-        blimpReverse = false;
-    }
-    else if (blimpX <= -4.5) {
-        blimpReverse = true;
+    if (blimpX > 4.6) {
+        blimpX = -9.0;
     }
 
-    glutPostRedisplay(); // Request a redraw to create animation effect
-    glutTimerFunc(16.66, updateBlimp, 0); // 60 frames per second (1000 ms / 60 frames = 16.66 ms per frame)
+    glutPostRedisplay();
+    glutTimerFunc(16.66, updateBlimp, 0);
 }
 
 void circle(float radius, float xc, float yc, float r, float g, float b)
 {
-    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    glBegin(GL_POLYGON);
     for (int i = 0;i < 200;i++)
     {
         glColor3ub(r, g, b);
@@ -53,22 +46,15 @@ void circle(float radius, float xc, float yc, float r, float g, float b)
 
 void drawEllipse(float centerX, float centerY, float radiusX, float radiusY, int segments, float red, float green, float blue) {
 
-
     glBegin(GL_TRIANGLE_FAN);
-
-    glColor3ub(red, green, blue); // Set fill color
-    glVertex2f(centerX, centerY); // Center of the ellipse
-
-
+    glColor3ub(red, green, blue);
+    glVertex2f(centerX, centerY);
     for (int i = 0; i <= segments; ++i) {
         float theta = 2.0f * 3.1415926f * float(i) / float(segments);
-
         float x = radiusX * cosf(theta);
         float y = radiusY * sinf(theta);
-
         glVertex2f(x + centerX, y + centerY);
     }
-
     glEnd();
 }
 
@@ -132,7 +118,7 @@ void buldingBehindBuildinginfrontbatman() {
     glVertex2f(-2.03134, 8.36676);
     glVertex2f(-3.31588, 8.3813);
     glEnd();
-
+    //add missing windows
 }
 
 void npcBuildings() {
@@ -218,126 +204,47 @@ void npcBuildings() {
         glEnd();
     }
 
+    //Middle building covering empty space
+//Missing window
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(0.26, 7.56);
+    glVertex2f(2.29124, 7.53613);
+    glVertex2f(2.29844, 3.31215);
+    glVertex2f(0.26382, 4.75525);
+    glEnd();
+    //roof
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(0.26, 7.56);
+    glVertex2f(2.29124, 7.53613);
+    glVertex2f(2.58239, 7.82382);
+    glVertex2f(1.02251, 7.87171);
+    glEnd();
 
-
-
-    // //4th building
-    // glBegin(GL_POLYGON);
-    // glColor3ub(83, 51, 43);
-    // glVertex2f(2.02467, 9.06197);
-    // glVertex2f(2.50558, 9.05428);
-    // glVertex2f(2.51859, 9.89731);
-    // glVertex2f(2.03375, 9.89659);
-    // glEnd();
-    // glBegin(GL_POLYGON);
-    // glColor3ub(83, 51, 43);
-    // glVertex2f(2.50558, 9.05428);
-    // glVertex2f(2.7748, 9.06163);
-    // glVertex2f(2.78016, 9.88658);
-    // glVertex2f(2.51859, 9.89731);
-    // glEnd();
-    // //ledge
-    // glBegin(GL_POLYGON);
-    // glColor3ub(83, 51, 43);
-    // glVertex2f(2.01189, 9.89686);
-    // glVertex2f(2.51859, 9.89731);
-    // glVertex2f(2.51562, 9.95296);
-    // glVertex2f(2.01249, 9.94572);
-    // glEnd();
-    // glBegin(GL_POLYGON);
-    // glColor3ub(83, 51, 43);
-    // glVertex2f(2.51859, 9.89731);
-    // glVertex2f(2.78016, 9.88658);
-    // glVertex2f(2.78166, 9.93306);
-    // glVertex2f(2.51562, 9.95296);
-    // glEnd();
-    // //top
-    // glBegin(GL_POLYGON);
-    // glColor3ub(83, 51, 43);
-    // glVertex2f(2.23, 9.95);
-    // glVertex2f(2.48, 9.95);
-    // glVertex2f(2.48003, 10.02174);
-    // glVertex2f(2.33283, 10.02355);
-    // glVertex2f(2.33464, 9.9783);
-    // glVertex2f(2.22545, 9.9783);
-    // glEnd();
-
-    // //5th building
-    // glBegin(GL_POLYGON);
-    // glColor3ub(120, 72, 45);
-    // glVertex2f(2.07808, 9.05872);
-    // glVertex2f(2.27397, 9.05519);
-    // glVertex2f(2.27554, 9.75256);
-    // glVertex2f(2.08364, 9.75256);
-    // glEnd();
-    // glBegin(GL_POLYGON);
-    // glColor3ub(120, 72, 45);
-    // glVertex2f(2.27397, 9.05519);
-    // glVertex2f(2.47815, 9.13477);
-    // glVertex2f(2.48476, 9.75868);
-    // glVertex2f(2.27554, 9.75256);
-    // glEnd();
-
-    // glBegin(GL_POLYGON);
-    // glColor3ub(120, 72, 45);
-    // glVertex2f(1.74795, 9.35141);
-    // glVertex2f(1.91479, 9.35023);
-    // glVertex2f(1.91479, 9.75677);
-    // glVertex2f(1.74912, 9.75794);
-    // glEnd();
-    // glBegin(GL_POLYGON);
-    // glColor3ub(120, 72, 45);
-    // glVertex2f(1.91479, 9.35023);
-    // glVertex2f(2.08, 9.35);
-    // glVertex2f(2.08364, 9.75256);
-    // glVertex2f(1.97204, 9.75098);
-    // glVertex2f(1.97303, 9.78258);
-    // glVertex2f(1.91479, 9.75677);
-    // glEnd();
-
-    // //6th building
-    // //bottom portion
-    // glBegin(GL_POLYGON);
-    // glColor3ub(5, 13, 22);
-    // glVertex2f(1.4, 6.89);
-    // glVertex2f(2.1, 6.89);
-    // glVertex2f(2.1, 8.8);
-    // glVertex2f(1.4, 8.8);
-    // glEnd();
-    // //top portion
-    // glBegin(GL_POLYGON);
-    // glColor3ub(5, 13, 22);
-    // glVertex2f(1.44571, 8.70817);
-    // glVertex2f(2.1, 8.7001);
-    // glVertex2f(2.1, 9.6);
-    // glVertex2f(1.45564, 9.6);
-    // glEnd();
-
-
-
-    // //3rd building 
-    // glBegin(GL_POLYGON);
-    // glColor3ub(9, 16, 27);
-    // glVertex2f(3.08383, 8.57307);
-    // glVertex2f(3.23353, 8.65178);
-    // glVertex2f(3.23662, 9.35863);
-    // glVertex2f(3.08537, 9.36017);
-    // glEnd();
-    // glBegin(GL_POLYGON);
-    // glColor3ub(9, 16, 27);
-    // glVertex2f(2.5236, 8.56381);
-    // glVertex2f(3.08383, 8.57307);
-    // glVertex2f(3.08537, 9.36017);
-    // glVertex2f(2.52977, 9.36171);
-    // glEnd();
-    // glBegin(GL_POLYGON);
-    // glColor3ub(9, 16, 27);
-    // glVertex2f(2.85233, 9.36);
-    // glVertex2f(3, 9.36);
-    // glVertex2f(2.99432, 9.4574);
-    // glVertex2f(2.85387, 9.46049);
-    // glEnd();
-
+    //3rd building 
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(3.08383, 8.57307);
+    glVertex2f(3.23353, 8.65178);
+    glVertex2f(3.23662, 9.35863);
+    glVertex2f(3.08537, 9.36017);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(2.5236, 8.56381);
+    glVertex2f(3.08383, 8.57307);
+    glVertex2f(3.08537, 9.36017);
+    glVertex2f(2.52977, 9.36171);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(9, 16, 27);
+    glVertex2f(2.85233, 9.36);
+    glVertex2f(3, 9.36);
+    glVertex2f(2.99432, 9.4574);
+    glVertex2f(2.85387, 9.46049);
+    glEnd();
+    //Add missing windows
 
     //2nd building
     glLineWidth(2);
@@ -429,7 +336,6 @@ void npcBuildings() {
     glVertex2f(3.42484, 9.3);
     glEnd();
 
-
     //6th floor
     for (float i = 3.26315; i <= 3.5; i += 0.0016200000)
     {
@@ -495,9 +401,8 @@ void npcBuildings() {
     glVertex2f(3.86536, 9.441);
     glVertex2f(3.63368, 9.43908);
     glEnd();
-
-
 }
+
 void Batman() {
     //ears
     glBegin(GL_TRIANGLES);
@@ -591,49 +496,44 @@ void Batman() {
     glVertex2f(-1.18588, 7.27707);
     glVertex2f(-1.27121, 7.64028);
     glEnd();
-
 }
 
 void policeBlimp() {
-    drawEllipse(blimpX, 14.51, 0.75, 0.32, 100, 57, 52, 57);
+    glPushMatrix();
+    glTranslatef(blimpX, 0, 0);
+    drawEllipse(2.19, 14.51, 0.75, 0.32, 100, 57, 52, 57);
 
-    // //light
-    // glBegin(GL_QUADS);
-    // glColor3ub(177, 160, 53);
-    // glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
-    // glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
-    // glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
-    // glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
-    // glEnd();
-
-
-        //light with gradient transparency
     glBegin(GL_QUADS);
-    glColor4ub(177, 160, 53, 255); // Solid color at the bottom
-    glVertex2f((2.12859 - 2.19) + blimpX, 14.08628);
-    glVertex2f((2.31533 - 2.19) + blimpX, 10.89752);
-    glColor4ub(177, 160, 53, 1); // Semi-transparent color at the top
-    glVertex2f((3.98194 - 2.19) + blimpX, 11.23578);
-    glVertex2f((2.31181 - 2.19) + blimpX, 14.08628);
+    glColor3ub(172, 151, 54); // Solid color at the bottom 
+    glVertex2f(2.12859, 14.08628);
+    glColor3ub(80, 72, 40); // Semi-transparent color at the top
+    glVertex2f(2.31533, 10.89752);
+    glColor3ub(80, 72, 40); // Semi-transparent color at the top
+    glVertex2f(3.98194, 11.23578);
+    glColor3ub(172, 151, 54); // Solid color at the bottom 
+    glVertex2f(2.31181, 14.08628);
     glEnd();
+
     //box
     glBegin(GL_QUADS);
     glColor3ub(71, 66, 72);
-    glVertex2f((1.96175 - 2.19) + blimpX, 14.07416);
-    glVertex2f((2.31214 - 2.19) + blimpX, 14.07416);
-    glVertex2f((2.32 - 2.19) + blimpX, 14.21);
-    glVertex2f((1.94 - 2.19) + blimpX, 14.21);
-    glEnd();
+    glVertex2f(1.96175, 14.07416);
+    glVertex2f(2.31214, 14.07416);
+    glVertex2f(2.32, 14.21);
+    glVertex2f(1.94, 14.21);
+
     //glass
     glBegin(GL_QUADS);
     glColor3ub(88, 96, 104);
-    glVertex2f((1.99719 - 2.19) + blimpX, 14.1616);
-    glVertex2f((1.99962 - 2.19) + blimpX, 14.12766);
-    glVertex2f((2.31356 - 2.19) + blimpX, 14.12766);
-    glVertex2f((2.31356 - 2.19) + blimpX, 14.1616);
+    glVertex2f(1.99719, 14.1616);
+    glVertex2f(1.99962, 14.12766);
+    glVertex2f(2.31356, 14.12766);
+    glVertex2f(2.31356, 14.1616);
     glEnd();
+    glPopMatrix();
 
 }
+
 void Buildinginfrontbatman() {
     //roof
     glBegin(GL_QUADS);
@@ -869,7 +769,7 @@ void Buildinginfrontbatman() {
     glVertex2f(1.44, 4.25);
     glVertex2f(2.02, 4.17);
     glEnd();
-    //
+
     glBegin(GL_QUADS);
     glColor3ub(28, 28, 32);
     glVertex2f(0.09639, 3.02589);
@@ -878,7 +778,6 @@ void Buildinginfrontbatman() {
     glVertex2f(0.16628, 2.76324);
     glEnd();
 
-    //
     glBegin(GL_QUADS);
     glColor3ub(84, 46, 41);
     glVertex2f(2.02, 4.17);
@@ -898,7 +797,6 @@ void Buildinginfrontbatman() {
 
     //botom front
     glBegin(GL_QUADS);
-
     glColor3ub(15, 23, 35);
     glVertex2f(0.16809, 2.50719);
     glVertex2f(-1.4175, 2.73);
@@ -991,7 +889,6 @@ void Buildinginfrontbatman() {
     glVertex2f(-1.01, 0.48);
     glEnd();
 
-
     //side
     glBegin(GL_QUADS);
     glColor3ub(57, 38, 35);
@@ -1067,6 +964,7 @@ void Buildinginfrontbatman() {
     glEnd();
 
 }
+
 void buildingBeforeverticleWindows() {
     //roof
     glBegin(GL_QUADS);
@@ -1446,6 +1344,7 @@ void buildingBeforeverticleWindows() {
 
 
 }
+
 void buildingAboveBottomRight() {
     //roof
     glBegin(GL_QUADS);
@@ -1518,6 +1417,7 @@ void buildingAboveBottomRight() {
 
 
 }
+
 void bottomRightbuilding() {
     //roof
     glBegin(GL_QUADS);
@@ -1621,7 +1521,6 @@ void buildingWithVerticleWindows() {
 
 void wayneTower() {
 
-
     //antenna
     glBegin(GL_POLYGON);
     glColor3ub(134, 92, 70);
@@ -1688,13 +1587,8 @@ void wayneTower() {
     glVertex2f(-4.4, 12.6);
     glEnd();
 
-
-
-
-
     //windows
     // top tower
-
     //First floor
     glLineWidth(8);
     glBegin(GL_LINES);
@@ -2861,9 +2755,7 @@ void wayneTower() {
     glVertex2f(-3.12956, 8.89564);
     glEnd();
 
-
 }
-
 
 void batmanBuilding() {
 
@@ -2920,8 +2812,6 @@ void batmanBuilding() {
     glVertex2f(-0.74884, 7.18447);
     glEnd();
 
-
-
     //building body
     glBegin(GL_POLYGON);
     glColor3ub(18, 14, 16); // Building rgb(18, 14, 16)
@@ -2951,10 +2841,6 @@ void batmanBuilding() {
     glVertex2f(-0.87452, 2.33164);
     glVertex2f(-1.31265, 2.39414);
     glEnd();
-
-
-
-
 
     //bottom ledge
     glBegin(GL_QUADS);
@@ -3996,7 +3882,6 @@ void GCPD() {
     glEnd();
 }
 
-
 void buildingInMiddleInfrontOfBatman() {
     //front
     glBegin(GL_POLYGON);
@@ -4033,61 +3918,120 @@ void buildingInMiddleInfrontOfBatman() {
     glEnd();
 }
 
+void playMusic() {
+    PlaySound("music.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+}
 
-void display() {
-    glClearColor(11.0f, 27.0f, 43.0f, 0.0f); // Set background color to black and opaque
-    glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
-
+void myInit() {
+    glClearColor(0.0, 0.0, 0.0, 0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(-6, 6, 0, 17);
-    glMatrixMode(GL_MODELVIEW);
-
-    //Objects
-
-    sky();
-    policeBlimp();
-
-    npcBuildings();
-    buildingNextTobuildingWithVerticleWindows();
-    buildingWithVerticleWindows();
-    wayneTower();
-    buildingInMiddleInfrontOfBatman();
-    buldingBehindBuildinginfrontbatman();
-    Buildinginfrontbatman();
-    batmanBuilding();
-    BatmanSignal();
-    GCPD();
-    buildingfrontofgcpd();
-    policeBuilding();
-    buildingBeforeverticleWindows();
-    buildingAboveBottomRight();
-    bottomRightbuilding();
-
-    Batman();
-
-    glFlush(); // Render now
+    // glMatrixMode(GL_MODELVIEW);
 
 }
 
-int main(int argc, char** argv) {
-    glutInit(&argc, argv); // Initialize GLUT
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT);
+    glMatrixMode(GL_MODELVIEW);
+    if (saveGotham) {
+        sky();
+        policeBlimp();
+        npcBuildings();
+        buildingNextTobuildingWithVerticleWindows();
+        buildingWithVerticleWindows();
+        wayneTower();
+        buildingInMiddleInfrontOfBatman();
+        buldingBehindBuildinginfrontbatman();
+        Buildinginfrontbatman();
+        batmanBuilding();
+        BatmanSignal();
+        GCPD();
+        buildingfrontofgcpd();
+        policeBuilding();
+        buildingBeforeverticleWindows();
+        buildingAboveBottomRight();
+        bottomRightbuilding();
+        Batman();
+        glFlush();
+    }
+    else
+    {
+        sky();
+        npcBuildings();
+        buildingNextTobuildingWithVerticleWindows();
+        buildingWithVerticleWindows();
+        wayneTower();
+        buildingInMiddleInfrontOfBatman();
+        buldingBehindBuildinginfrontbatman();
+        Buildinginfrontbatman();
+        batmanBuilding();
+        GCPD();
+        buildingfrontofgcpd();
+        policeBuilding();
+        buildingBeforeverticleWindows();
+        buildingAboveBottomRight();
+        bottomRightbuilding();
+        glFlush();
+    }
+}
 
+void handleKeypress(unsigned char key, int x, int y) {
+    switch (key) {
+    case 'B':
+    case 'b':
+        saveGotham = !saveGotham;
+        break;
+    case 'S':
+    case 's':
+        blimpSpeed = 0;
+        break;
+    case 'A':
+    case 'a':
+        blimpSpeed = 0.001;
+        break;
+    case 'Z':
+    case 'z':
+        blimpForward = false; //reverse blimp
+        break;
+    case 'X':
+    case 'x':
+        blimpForward = true;
+        break;
+        glutPostRedisplay();
+    }
+}
+
+void handleMouse(int button, int state, int x, int y) {
+    if (button == GLUT_LEFT_BUTTON)
+    {
+        blimpSpeed += 0.001f;
+    }
+    if (button == GLUT_RIGHT_BUTTON)
+    {
+        blimpSpeed -= 0.001f;
+    }
+    if (blimpSpeed <= 0)
+    {
+        blimpSpeed = 0;
+    }
+
+    glutPostRedisplay();
+}
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(750, 1040);
     glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 750) / 2,
-        (glutGet(GLUT_SCREEN_HEIGHT) - 1061) / 2);
-    glutCreateWindow("Batman"); // Create a window with the given title
-    // Set the window's initial width & height
-    // gluOrtho2D(-6, 6, 0, 17);
-    glutDisplayFunc(display); // Register display callback handler for window re-paint
-    // Initialize updateBlimp function and timer
+        (glutGet(GLUT_SCREEN_HEIGHT) - 1080) / 2);
+    glutCreateWindow("Gotham City");
+    glutDisplayFunc(display);
+    myInit();
+    glutKeyboardFunc(handleKeypress);
+    glutMouseFunc(handleMouse);
     glutTimerFunc(0, updateBlimp, 0);
-
-
-    //Code to play music
-    // sndPlaySound("bat.wav", SND_ASYNC);
-    // sndPlaySound("instrumental.wav", SND_ASYNC);
-    // PlaySound("instrumental.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
-    glutMainLoop(); // Enter the event-processing loop
+    playMusic();
+    glutMainLoop();
     return 0;
 }
